@@ -1,5 +1,6 @@
 # Exploration et Applications des IA Génératives en Sciences Sociales 
-LilleLMs - Organisation QuantiLille 2026
+
+a.k.a LilleLMs | Organisation QuantiLille 2026
 
 ## Date
 
