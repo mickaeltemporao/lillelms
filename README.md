@@ -54,7 +54,9 @@ Après-midi :
 Matin :
 
 - Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques.  
-- Après-midi :  
+
+Après-midi :  
+
 - Mise en pratique en sous-groupes, orientée vers le développement d’un mini-projet de recherche intégrant des IA génératives. 
 
 ### Vendredi | Consolidation et perspectives futures
@@ -62,5 +64,7 @@ Matin :
 Matin :
 
 - Synthèse générale et une discussion sur les tendances futures des IA génératives en sciences sociales. Retour sur les projets réalisés et la présentation de ressources pour un approfondissement ultérieur.  
-- Après-midi :  
+
+Après-midi :  
+
 - Formation à la configuration d’un environnement de travail personnel : Temps dédié pas-à-pas pour installer et configurer localement les outils.
