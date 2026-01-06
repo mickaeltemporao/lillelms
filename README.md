@@ -70,3 +70,6 @@ Matin :
 Après-midi :  
 
 - Formation à la configuration d’un environnement de travail personnel : Temps dédié pas-à-pas pour installer et configurer localement les outils.
+
+## Divers
+- https://www.kaggle.com/learn-guide/5-day-agents
