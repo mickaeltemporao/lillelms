@@ -8,11 +8,11 @@ Dernière semaine de juin 2026
 
 ## Description
 
-Ce module propose d’explorer les fondements et les applications des intelligences artificielles génératives dans le champ des sciences sociales. Conçu pour des participantes débutantes en programmation et curieuses des apports de l’IA en recherche, il offre une double approche. La première partie présente une initiation pratique à Python et la découverte progressive des outils d'analyse et génération de contenus (textuels, audio, visuels) via des plateformes cloud. La seconde partie est articulée autour d’un focus thématique par jour, permettant d’approfondir chaque grand axe d’application avec des interventions d’expertes lors des demi-journées. L’objectif est de d’équiper les chercheuses en sciences sociales de compétences techniques et analytiques permettant d'intégrer les IA génératives dans leurs projets de recherche, tant comme objet ou outil de recherche. 
+Ce module propose d’explorer les fondements et les applications des intelligences artificielles génératives dans le champ des sciences sociales. Conçu pour des participantes débutantes en programmation et curieuses des apports de l’IA en recherche, il offre une double approche. La première partie présente une initiation pratique à Python et la découverte progressive des outils d'analyse et de génération de contenus (textuels, audio, visuels) via des plateformes cloud. La seconde partie est articulée autour d’un focus thématique par jour, permettant d’approfondir chaque grand axe d’application avec des interventions d’expertes lors des demi-journées. L’objectif est d’équiper les chercheuses en sciences sociales de compétences techniques et analytiques permettant d'intégrer les IA génératives dans leurs projets de recherche, tant comme objet ou que comme outil de recherche.
 
 ## Prérequis
 
-- Aucune connaissance préalable en Python requise  
+- Aucune connaissance préalable en Python n'est requise  
 - Une familiarité avec les concepts de base de l’analyse de données est un atout  
 - Curiosité et intérêt pour les technologies d’IA et leurs impacts sur les sciences sociales
 
