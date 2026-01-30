@@ -4,7 +4,7 @@ a.k.a LilleLMs | Organisation QuantiLille 2026
 
 ## Date
 
-Dernière semaine de juin 2026
+Lundi 22 a vendredi 26 juin 2026
 
 ## Description
 
