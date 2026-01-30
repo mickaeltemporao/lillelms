@@ -1,6 +1,7 @@
 # Exploration et Applications des IA Génératives en Sciences Sociales
 
 a.k.a LilleLMs | Organisation QuantiLille 2026
+
 22-26 juin 2026
 
 ### Intervenant.es
