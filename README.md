@@ -2,9 +2,11 @@
 
 a.k.a LilleLMs | Organisation QuantiLille 2026
 
-## Date
-
-Lundi 22 a vendredi 26 juin 2026
+### Intervenant.es
+    - [Léo Mignot (LM)](leo.mignot[at]cnrs.fr )
+    - [Mickael Temporão (MT)](m.temporao[at]sciencespobordeaux.fr)
+    - [Flore Vancompernolle Vromman (FV)](flore.vancompernolle[at]uclouvain.be)
+    - [Corentin Vande Kerckhove (DV)](corentin.vandekerckhove[at]uclouvain.be)
 
 ## Description
 
@@ -20,12 +22,12 @@ Ce module propose d’explorer les fondements et les applications des intelligen
 
 ### Lundi | Présentation générale
 
-Matin :
+Matin : MT/ALL ?
 
 - Accueil des participantes et présentation générale du module  
 - Tour de table : identification des attentes et familiarisation avec l’environnement
 
-Après-midi : 
+Après-midi : LM/FV
 
 - Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface  
 - Introduction à Python : bases de la programmation et manipulation de données  
@@ -33,41 +35,41 @@ Après-midi :
 
 ### Mardi | Fondements et applications initiales des IA génératives 
 
-Matin :
+Matin : CV
 
 - Session dédiée à la découverte des concepts fondamentaux et du panorama des outils (LLMs, générateurs d’images, etc.). Présentation théorique complétée par des exemples concrets d’applications en sciences sociales.  
 
-Après-midi :  
+Après-midi : MT
 
 - Approfondissement de l’ingénierie des prompts et de la prise en main des API (OpenAI, Hugging Face,...?) via un atelier pratique de génération et d’analyse de contenus.
 
 ### Mercredi | Analyse et traitement des données textuelles, audio et visuelles 
 
-Matin :
+Matin : CV/MT
 
 - Approfondissement de l’analyse des données textuelles et qualitatives dans les recherches en sciences sociales. Introduction à des méthodes d’extraction d’informations et de détection de biais dans des discours.
 
-Après-midi :
+Après-midi : CV/MT
 
 - Traitement des données audio et visuelles : transcription audio avec Whisper ? et analyse de contenus visuels abordées via des démonstrations et exercices pratiques.
 
 ### Jeudi | Personnalisation des modèles et enjeux éthiques
 
-Matin :
+Matin : FV/LM
 
 - Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques.  
 
-Après-midi :  
+Après-midi : FV/LM
 
 - Mise en pratique en sous-groupes, orientée vers le développement d’un mini-projet de recherche intégrant des IA génératives. 
 
 ### Vendredi | Consolidation et perspectives futures
 
-Matin :
+Matin : MT/ALL
 
 - Synthèse générale et une discussion sur les tendances futures des IA génératives en sciences sociales. Retour sur les projets réalisés et la présentation de ressources pour un approfondissement ultérieur.  
 
-Après-midi :  
+Après-midi : LM/ALL
 
 - Formation à la configuration d’un environnement de travail personnel : Temps dédié pas-à-pas pour installer et configurer localement les outils.
 
