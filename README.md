@@ -3,10 +3,10 @@
 a.k.a LilleLMs | Organisation QuantiLille 2026
 
 ### Intervenant.es
-    - [Léo Mignot (LM)](leo.mignot[at]cnrs.fr )
-    - [Mickael Temporão (MT)](m.temporao[at]sciencespobordeaux.fr)
-    - [Flore Vancompernolle Vromman (FV)](flore.vancompernolle[at]uclouvain.be)
-    - [Corentin Vande Kerckhove (DV)](corentin.vandekerckhove[at]uclouvain.be)
+- [Léo Mignot (LM)](leo.mignot[at]cnrs.fr)
+- [Mickael Temporão (MT)](m.temporao[at]sciencespobordeaux.fr)
+- [Flore Vancompernolle Vromman (FV)](flore.vancompernolle[at]uclouvain.be)
+- [Corentin Vande Kerckhove (DV)](corentin.vandekerckhove[at]uclouvain.be)
 
 ## Description
 
@@ -14,8 +14,8 @@ Ce module propose d’explorer les fondements et les applications des intelligen
 
 ## Prérequis
 
-- Aucune connaissance préalable en Python requise  
-- Une familiarité avec les concepts de base de l’analyse de données est un atout  
+- Aucune connaissance préalable en Python requise
+- Une familiarité avec les concepts de base de l’analyse de données est un atout
 - Curiosité et intérêt pour les technologies d’IA et leurs impacts sur les sciences sociales
 
 ## Programme Brouillon
@@ -24,20 +24,20 @@ Ce module propose d’explorer les fondements et les applications des intelligen
 
 Matin : MT/ALL ?
 
-- Accueil des participantes et présentation générale du module  
+- Accueil des participantes et présentation générale du module
 - Tour de table : identification des attentes et familiarisation avec l’environnement
 
 Après-midi : LM/FV
 
-- Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface  
-- Introduction à Python : bases de la programmation et manipulation de données  
+- Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface 
+- Introduction à Python : bases de la programmation et manipulation de données
 - Atelier pratique : configuration de l’environnement cloud 
 
 ### Mardi | Fondements et applications initiales des IA génératives 
 
 Matin : CV
 
-- Session dédiée à la découverte des concepts fondamentaux et du panorama des outils (LLMs, générateurs d’images, etc.). Présentation théorique complétée par des exemples concrets d’applications en sciences sociales.  
+- Session dédiée à la découverte des concepts fondamentaux et du panorama des outils (LLMs, générateurs d’images, etc.). Présentation théorique complétée par des exemples concrets d’applications en sciences sociales.
 
 Après-midi : MT
 
@@ -57,7 +57,7 @@ Après-midi : CV/MT
 
 Matin : FV/LM
 
-- Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques.  
+- Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques. 
 
 Après-midi : FV/LM
 
@@ -67,7 +67,7 @@ Après-midi : FV/LM
 
 Matin : MT/ALL
 
-- Synthèse générale et une discussion sur les tendances futures des IA génératives en sciences sociales. Retour sur les projets réalisés et la présentation de ressources pour un approfondissement ultérieur.  
+- Synthèse générale et une discussion sur les tendances futures des IA génératives en sciences sociales. Retour sur les projets réalisés et la présentation de ressources pour un approfondissement ultérieur.
 
 Après-midi : LM/ALL
 
