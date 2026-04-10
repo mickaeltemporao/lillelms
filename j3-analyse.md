@@ -13,5 +13,9 @@
 ### ID
 
 web mining id coco?
+
 - import depuis boite à id : remarque LM : à un moment faudrait causer des IA non génératives et leurs avantages
   - genre passer du temps sur bert/topic modeling/etc. -> peut-être J3 ? -> je peux m'y coller en mode mini intro si on veut pas bloquer trop de temps dessus
+  - <https://github.com/pyshs/CUSO2026/blob/main/notebooks/topic_modeling.ipynb>
+  - <https://github.com/pyshs/CUSO2026/blob/main/notebooks/Le%20texte%20comme%20un%20sac%20de%20mots.ipynb>
+  - <https://github.com/pyshs/CUSO2026/blob/main/notebooks/pandas_et_texte.ipynb>
