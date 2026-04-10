@@ -13,3 +13,5 @@
 ### ID
 
 web mining id coco?
+- import depuis boite à id : remarque LM : à un moment faudrait causer des IA non génératives et leurs avantages
+  - genre passer du temps sur bert/topic modeling/etc. -> peut-être J3 ? -> je peux m'y coller en mode mini intro si on veut pas bloquer trop de temps dessus
