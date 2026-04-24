@@ -15,6 +15,12 @@ Initier l'idée d'un Hacktime sur un de leur projets [en fin de semaine]
 - Introduction à Python : bases de la programmation et manipulation de données  
 - Atelier pratique : configuration de l’environnement cloud
 
+Leur partager un Notebook qui introduit à Python comme ça on leur explique les bases tout en même temps leur montrer collab et qu'ils puissent runner leur code.
+Dans le notebook, ce que je mettrais:
+1. Bases: variables (txt, nb, booléens), listes et dictionnaires, conditions, boucles, création de fonction, importation de fonctions/packages
+2. Manipulation de données: pandas, lecture d'un CSV, réaliser des opérations sur un dataframe, visualiser les données via un graphique simple
+3. Usage de l'IA dans collab (par exemple via la bibliothèque google-colab-ai)
+
 ### Ressources potentielles
 
 Ajout vrac LM (si besoin je peux sans trop de souci proposer une base initiation python avec ce qu'on a  déjà sous là main, ça me va de m'y coller):
