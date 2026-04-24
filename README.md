@@ -1,6 +1,8 @@
-# Exploration et Applications des IA Génératives en Sciences Sociales 
+# Exploration et Applications des IA Génératives en Sciences Sociales
 
 a.k.a LilleLMs | Organisation QuantiLille 2026
+
+22-26 juin 2026
 
 ### Intervenant.es
 - [Léo Mignot (LM)](leo.mignot[at]cnrs.fr)
@@ -10,12 +12,12 @@ a.k.a LilleLMs | Organisation QuantiLille 2026
 
 ## Description
 
-Ce module propose d’explorer les fondements et les applications des intelligences artificielles génératives dans le champ des sciences sociales. Conçu pour des participantes débutantes en programmation et curieuses des apports de l’IA en recherche, il offre une double approche. La première partie présente une initiation pratique à Python et la découverte progressive des outils d'analyse et génération de contenus (textuels, audio, visuels) via des plateformes cloud. La seconde partie est articulée autour d’un focus thématique par jour, permettant d’approfondir chaque grand axe d’application avec des interventions d’expertes lors des demi-journées. L’objectif est de d’équiper les chercheuses en sciences sociales de compétences techniques et analytiques permettant d'intégrer les IA génératives dans leurs projets de recherche, tant comme objet ou outil de recherche. 
+Ce module propose d’explorer les fondements et les applications des intelligences artificielles génératives dans le champ des sciences sociales. Conçu pour des participantes débutantes en programmation et curieuses des apports de l’IA en recherche, il offre une double approche. La première partie présente une initiation pratique à Python et la découverte progressive des outils d'analyse et de génération de contenus (textuels, audio, visuels) via des plateformes cloud. La seconde partie est articulée autour d’un focus thématique par jour, permettant d’approfondir chaque grand axe d’application avec des interventions d’expertes lors des demi-journées. L’objectif est d’équiper les chercheuses en sciences sociales de compétences techniques et analytiques permettant d'intégrer les IA génératives dans leurs projets de recherche, que ce soit comme outil d’analyse ou comme objet d’étude.
 
 ## Prérequis
 
-- Aucune connaissance préalable en Python requise
-- Une familiarité avec les concepts de base de l’analyse de données est un atout
+- Aucune connaissance préalable en Python n'est requise  
+- Une familiarité avec les concepts de base de l’analyse de données est un atout  
 - Curiosité et intérêt pour les technologies d’IA et leurs impacts sur les sciences sociales
 
 ## Programme Brouillon
@@ -29,11 +31,11 @@ Matin : MT/ALL ?
 
 Après-midi : LM/FV
 
-- Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface 
+- Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface
 - Introduction à Python : bases de la programmation et manipulation de données
-- Atelier pratique : configuration de l’environnement cloud 
+- Atelier pratique : configuration de l’environnement cloud
 
-### Mardi | Fondements et applications initiales des IA génératives 
+### Mardi | Fondements et applications initiales des IA génératives
 
 Matin : CV
 
@@ -43,7 +45,7 @@ Après-midi : MT
 
 - Approfondissement de l’ingénierie des prompts et de la prise en main des API (OpenAI, Hugging Face,...?) via un atelier pratique de génération et d’analyse de contenus.
 
-### Mercredi | Analyse et traitement des données textuelles, audio et visuelles 
+### Mercredi | Analyse et traitement des données textuelles, audio et visuelles
 
 Matin : CV/MT
 
@@ -57,11 +59,11 @@ Après-midi : CV/MT
 
 Matin : FV/LM
 
-- Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques. 
+- Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques.
 
 Après-midi : FV/LM
 
-- Mise en pratique en sous-groupes, orientée vers le développement d’un mini-projet de recherche intégrant des IA génératives. 
+- Mise en pratique en sous-groupes, orientée vers le développement d’un mini-projet de recherche intégrant des IA génératives.
 
 ### Vendredi | Consolidation et perspectives futures
 
