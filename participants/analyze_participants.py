@@ -100,9 +100,6 @@ def descriptive_stats(df: pd.DataFrame) -> dict:
     stats["softwares"] = softs
 
     stats["universities"] = Counter(df.iloc[:, COL["universite"]].fillna("(non renseigné)"))
-    units = df.iloc[:, COL["unite_recherche"]].dropna().astype(str).str.strip()
-    units = units[units != ""]
-    stats["research_units"] = Counter(units)
 
     return stats
 
@@ -128,6 +125,15 @@ def build_records(df: pd.DataFrame) -> list[dict]:
             }
         )
     return records
+
+
+def _strip_leading_headers(text: str) -> str:
+    """Retire les titres markdown H1/H2 en début de réponse (parfois ajoutés
+    par le LLM malgré l'instruction). Le rendu du rapport gère ses propres titres."""
+    lines = text.splitlines()
+    while lines and (lines[0].lstrip().startswith(("# ", "## ")) or not lines[0].strip()):
+        lines.pop(0)
+    return "\n".join(lines).strip()
 
 
 def call_llm(client, prompt: str, max_tokens: int = 4096) -> str:
@@ -164,33 +170,34 @@ def analyze_text_globally(client, records: list[dict]) -> dict:
 
     motivations = call_llm(
         client,
-        f"""Voici les thèmes de recherche et motivations exprimés par les {len(records)} stagiaires (chacun précédé de son numéro et de sa discipline) :
+        f"""Voici les thèmes de recherche et motivations exprimés par les {len(records)} stagiaires :
 
 {themes_block}
 
-Produis une synthèse structurée en markdown comportant exactement ces sous-sections :
+Produis 4 paragraphes courts en français, **sans titre principal**, **sans listes à puces**, **sans citer de participants spécifiques**. Chaque paragraphe commence par son intitulé en gras suivi d'un point :
 
-**Grands axes de motivation** — 3 à 5 axes, sous forme de liste avec entre parenthèses un décompte approximatif des participants concernés.
+**Grands axes de motivation.** 2-4 phrases résumant les principaux motifs d'inscription observés dans le groupe.
 
-**Clusters thématiques de recherche** — regroupements pertinents avec exemples cités (références par numéro entre crochets quand utile).
+**Clusters thématiques de recherche.** 2-4 phrases regroupant les thématiques en quelques grandes familles.
 
-**Types de données mentionnées** — entretiens, données d'enquête, archives, médias sociaux, images, presse, etc. — avec décompte indicatif.
+**Types de données mentionnées.** 2-4 phrases résumant les natures de données évoquées (textuelles, quantitatives, audiovisuelles, archives, etc.), sans décompte précis.
 
-**Exposition préalable aux IA génératives** — qui mentionne déjà LLM / ChatGPT / NLP / génération d'images, etc., et à quel niveau (curieux, utilisateur, expérimenté).
+**Exposition préalable aux IA génératives.** 2-4 phrases sur le niveau global d'exposition du groupe (proportion approximative d'expérimentés / ponctuels / novices) et les usages mentionnés.
 
-Sois concis, factuel, sans gloses.""",
+Sois concis, factuel, synthétique.""",
     )
 
     enquetes = call_llm(
         client,
-        f"""Voici les enquêtes / données déjà analysées par les stagiaires (chacun précédé de son numéro) :
+        f"""Voici les enquêtes / données déjà analysées par les stagiaires :
 
 {enquetes_block}
 
-Produis une synthèse markdown avec :
-- **Types d'enquêtes / données récurrents** (avec décompte)
-- **Méthodologies dominantes** (quantitatif / qualitatif / mixte)
-- **Niveau d'expérience global estimé du groupe** (novice / intermédiaire / avancé, avec justification)""",
+Produis 2 paragraphes courts en français, **sans titre principal**, **sans listes à puces**, chaque paragraphe commençant par son intitulé en gras suivi d'un point :
+
+**Types d'enquêtes et de données récurrents.** Une à deux phrases résumant les principaux types observés.
+
+**Méthodologies dominantes.** Un paragraphe court (3-5 phrases) résumant les approches (quantitatif / qualitatif / mixte) et les logiciels couramment cités.""",
     )
 
     pedago = call_llm(
@@ -203,17 +210,17 @@ Et leurs commentaires supplémentaires :
 
 {commentaires_block or '(aucun commentaire)'}
 
-Produis une liste markdown de **suggestions concrètes pour les 4 intervenants** :
+Produis une **synthèse pédagogique succincte** à destination des 4 intervenants : ce qu'il faut retenir du groupe pour bien calibrer la formation — hétérogénéité, attentes saillantes, pièges à éviter, 2-3 exemples qui résonneront avec le groupe.
 
-**Exemples d'applications à présenter** — 3 à 5 exemples concrets qui résonneront avec les disciplines / données du groupe.
-
-**Points d'attention pédagogiques** — hétérogénéité du niveau, besoins spécifiques, attentes potentiellement décalées par rapport au programme.
-
-**Sujets prioritaires à aborder** — d'après les attentes exprimées.""",
-        max_tokens=6144,
+Format : un seul bloc de 4 à 6 phrases maximum, en prose. **Pas de titre, pas de tableau, pas de liste à puces.**""",
+        max_tokens=1024,
     )
 
-    return {"motivations": motivations, "enquetes": enquetes, "pedago": pedago}
+    return {
+        "motivations": _strip_leading_headers(motivations),
+        "enquetes": _strip_leading_headers(enquetes),
+        "pedago": _strip_leading_headers(pedago),
+    }
 
 
 def one_line_per_participant(client, records: list[dict]) -> dict[int, str]:
@@ -303,22 +310,13 @@ def render_markdown(stats: dict, llm_results: dict, records: list[dict], summari
       "de Python ; R est nettement plus représenté. Le démarrage lundi/mardi doit accepter cette asymétrie.")
     a("")
 
-    a("## 5. Universités et unités de recherche")
-    a("")
-    a("### Universités représentées")
+    a("## 5. Universités représentées")
     a("")
     a("| Université | Nombre |")
     a("|---|---|")
     for u, n in sorted(stats["universities"].items(), key=lambda x: (-x[1], x[0])):
         a(f"| {u} | {n} |")
     a("")
-    if stats["research_units"]:
-        a("### Unités de recherche (renseignées)")
-        a("")
-        for u, n in sorted(stats["research_units"].items(), key=lambda x: (-x[1], x[0])):
-            count = f" ({n})" if n > 1 else ""
-            a(f"- {u}{count}")
-        a("")
 
     if has_llm:
         a("## 6. Synthèse des champs texte libre (analyse LLM)")
@@ -331,7 +329,7 @@ def render_markdown(stats: dict, llm_results: dict, records: list[dict], summari
         a("")
         a(llm_results["enquetes"])
         a("")
-        a("### 6.3. Suggestions pour l'équipe pédagogique")
+        a("### 6.3. Synthèse pédagogique pour les 4 intervenants")
         a("")
         a(llm_results["pedago"])
         a("")

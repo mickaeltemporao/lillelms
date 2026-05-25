@@ -87,5 +87,7 @@ uv run python participants/analyze_participants.py
 
 Le rapport est écrit dans `participants/analyse_des_participants.md`. Sans clé API, le rapport est généré en mode descriptif uniquement (sans synthèse LLM des champs texte libre).
 
+> Le CSV brut des candidatures n'est pas fourni dans ce dépôt pour des raisons d'anonymisation des données personnelles (noms, e-mails, motivations détaillées). Seul le rapport synthétique est versionné.
+
 ## Divers
 - https://www.kaggle.com/learn-guide/5-day-agents
