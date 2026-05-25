@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# macOS
+.DS_Store
+
+# Données brutes des participants (PII, ne pas committer)
+participants/MaJ_QL26_Selection_IA_2026_05_11.csv
