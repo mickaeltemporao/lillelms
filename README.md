@@ -75,5 +75,19 @@ Après-midi : LM/ALL
 
 - Formation à la configuration d’un environnement de travail personnel : Temps dédié pas-à-pas pour installer et configurer localement les outils.
 
+## Analyse des participants
+
+Le dossier `participants/` contient un script qui génère un rapport synthétique sur les stagiaires sélectionnés. Les dépendances Python du repo sont gérées avec [`uv`](https://docs.astral.sh/uv/). Fournir la clé `ANTHROPIC_API_KEY` via un fichier `.env` à la racine (voir `.env.example`).
+
+```
+cp .env.example .env   # puis renseigner ANTHROPIC_API_KEY
+uv sync
+uv run python participants/analyze_participants.py
+```
+
+Le rapport est écrit dans `participants/analyse_des_participants.md`. Sans clé API, le rapport est généré en mode descriptif uniquement (sans synthèse LLM des champs texte libre).
+
+> Le CSV brut des candidatures n'est pas fourni dans ce dépôt pour des raisons d'anonymisation des données personnelles (noms, e-mails, motivations détaillées). Seul le rapport synthétique est versionné.
+
 ## Divers
 - https://www.kaggle.com/learn-guide/5-day-agents
