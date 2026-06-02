@@ -24,7 +24,7 @@ Ce module propose d’explorer les fondements et les applications des intelligen
 
 ### Lundi | Présentation générale
 
-Matin : MT/ALL ?
+Matin : Team Lille
 
 - Accueil des participantes et présentation générale du module
 - Tour de table : identification des attentes et familiarisation avec l’environnement
@@ -47,13 +47,13 @@ Après-midi : MT
 
 ### Mercredi | Analyse et traitement des données textuelles, audio et visuelles
 
-Matin : CV/MT
+Matin : CV
 
 - Approfondissement de l’analyse des données textuelles et qualitatives dans les recherches en sciences sociales. Introduction à des méthodes d’extraction d’informations et de détection de biais dans des discours.
 
-Après-midi : CV/MT
+Après-midi : MT
 
-- Traitement des données audio et visuelles : transcription audio avec Whisper ? et analyse de contenus visuels abordées via des démonstrations et exercices pratiques.
+- Traitement des données audio et visuelles : transcription audio et analyse de contenus visuels abordées via des démonstrations et exercices pratiques.
 
 ### Jeudi | Personnalisation des modèles et enjeux éthiques
 
