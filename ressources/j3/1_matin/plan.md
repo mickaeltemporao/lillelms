@@ -1,6 +1,6 @@
-# J3 matin (CV/MT) — Text mining : classique + LLM-based
+# J3 matin (CV) — Text mining : classique + LLM-based
 
-**Mercredi 24 juin 2026, 9h-12h** | Intervenants : Corentin Vande Kerckhove & Mickaël Temporão
+**Mercredi 24 juin 2026, 9h-12h** | Intervenant : Corentin Vande Kerckhove
 
 ## Logique
 
@@ -39,6 +39,5 @@ Mercredi matin = *détails text mining*. Approfondit les idées vues mardi (toke
 
 ## À caler
 
-- Répartition des blocs CV / MT (par ex. CV pipeline classique 9h10-10h50, MT bloc LLM-based 10h50-12h00)
 - Réutilisation possible des notebooks CUSO2026 mentionnés dans `j3-analyse.md`
-- Cohérence avec J3 PM (audio/visuel : Whisper, captionning)
+- Cohérence avec J3 PM (MT, audio/visuel : Whisper, captionning)
