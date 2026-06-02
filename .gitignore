@@ -178,3 +178,6 @@ cython_debug/
 
 # Données brutes des participants (PII, ne pas committer)
 participants/MaJ_QL26_Selection_IA_2026_05_11.csv
+
+# ignorer les dossiers files des render quarto
+*_files/
