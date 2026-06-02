@@ -99,11 +99,10 @@ Alternative : [Marimo](https://marimo.io/) notebooks
 
 [**SSPcloud (INSEE)**](https://datalab.sspcloud.fr)
 
-- = Unlimited(ish) power
-
 Demande accès GENCI (jean-zay, etc.) :
 https://www.edari.fr/
 
+- = Unlimited(ish) power
 
 ---
 
@@ -113,7 +112,7 @@ https://www.edari.fr/
 
 ## Accès (publics) IA générative
 
-- mistral/emy (mmeeeehhh)
+- mistral/Emmy (mmeeeehhh)
   - NOPE
 - humanum
   - expérimentations, pas forcément publiques ?
@@ -147,7 +146,7 @@ Détailler les plus courants (ex demo ollama ?)
 
 Ont largement participé :
 
-- Emilien SChultz
+- Emilien Schultz
 - Léo Mignot
 - Matthias Bussonnier
 - Mathieu Morey -->
