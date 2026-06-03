@@ -1,6 +1,6 @@
 # J2 matin — Plan de contenu détaillé
 
-Décline le plan horaire (`plan.md`) en plan hiérarchique de matière. Sert de squelette commun à 4 paires *slides + notebook*.
+Plan hiérarchique de matière pour la matinée du J2. Sert de squelette commun à 4 paires *slides + notebook*. Le découpage horaire des 3 h sera ajouté ici une fois les durées calées sur les 4 modules.
 
 ## Conventions
 
@@ -147,7 +147,7 @@ Notebook = tutoriel illustré qui tourne quasi clé en main avec quelques cellul
 ## À faire ensuite
 
 1. Décliner chaque module en 1 deck slides + 1 notebook avec running example codé et cellules TODO
-2. Réajuster les durées du plan horaire (`plan.md`) — les 4 modules à placer dans les 3h avec accueil, pause, carrousel et capitalisation
+2. Caler les durées des 4 modules dans les 3 h (avec accueil, pause, carrousel et capitalisation) et intégrer le découpage horaire en tête de ce fichier
 3. Décider où recaser les notions LLM retirées (pré-entraînement, fine-tuning, RLHF, multimodalité, reasoning) — proposition : transversal dans le carrousel ou dans les sections 1.4-1.5
 
 ## Questions ouvertes
