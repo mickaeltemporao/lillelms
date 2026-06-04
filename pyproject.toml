@@ -7,6 +7,7 @@ dependencies = [
     "bertopic>=0.17.4",
     "matplotlib>=3.10.9",
     "openai>=2.40.0",
+    "openai-whisper",
     "pandas>=3.0.3",
     "pillow>=12.2.0",
     "python-dotenv>=1.2.2",
@@ -20,3 +21,6 @@ dev = [
     "ipykernel>=6",
     "nbstripout>=0.7",
 ]
+
+[tool.uv.sources]
+openai-whisper = { git = "https://github.com/openai/whisper.git" }
