@@ -4,6 +4,19 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.104.1",
+    "bertopic>=0.17.4",
+    "matplotlib>=3.10.9",
+    "openai>=2.40.0",
     "pandas>=3.0.3",
+    "pillow>=12.2.0",
     "python-dotenv>=1.2.2",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.0",
+    "wikipedia-api>=0.15.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6",
+    "nbstripout>=0.7",
 ]
