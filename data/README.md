@@ -18,6 +18,8 @@ Les scripts sont idempotents : ré-exécuter un `fetch_*.py` ne change pas le co
 
 Un même dataset peut produire plusieurs CSV qui partagent `X` et `z` mais diffèrent par `y` (ex. law school : une cible régression, une cible classification).
 
+Quand un split train/test est livré, les fichiers se terminent par `_train.csv` et `_test.csv` (suffixes uniformes dans tout le dossier).
+
 ## Régénérer un dataset
 
 ```bash
@@ -26,6 +28,6 @@ uv run python data/<dataset>/fetch_<dataset>.py
 
 ## Datasets disponibles
 
-| Dossier | Description | Cibles |
-|---|---|---|
-| `law_school/` | LSAC National Longitudinal Bar Passage Study (Wightman 1998) | `y_zgpa` (régression), `y_pass_bar` (classification) |
+| Dossier | Description | Cibles | Split |
+|---|---|---|---|
+| `law_school/` | LSAC National Longitudinal Bar Passage Study (Wightman 1998) | `y_zgpa` (régression), `y_pass_bar` (classification) | 75/25 aléatoire |
