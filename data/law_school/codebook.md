@@ -1,11 +1,15 @@
 # Codebook : Law School
 
-Codebook commun aux deux CSV pré-traités :
+Codebook commun aux quatre CSV pré-traités, livrés sous forme de paires **train (75 %) / test (25 %)** pour deux tâches :
 
-- `law_school_for_regression.csv` : cible continue `y_zgpa`
-- `law_school_for_classification.csv` : cible binaire `y_pass_bar`
+| Fichier | Tâche | Cible | Taille |
+|---|---|---|---|
+| `law_school_for_regression_train.csv` | régression | `y_zgpa` | 14 019 lignes |
+| `law_school_for_regression_test.csv` | régression | `y_zgpa` | 4 673 lignes |
+| `law_school_for_classification_train.csv` | classification | `y_pass_bar` | 14 019 lignes |
+| `law_school_for_classification_test.csv` | classification | `y_pass_bar` | 4 673 lignes |
 
-Les deux fichiers partagent **la même matrice de features** `x_*` et **le même attribut sensible** `z_white`. Ils diffèrent uniquement par la cible `y_*`.
+Les quatre fichiers partagent **la même matrice de features** `x_*` et **le même attribut sensible** `z_white`. Ils diffèrent par la cible (`y_zgpa` ou `y_pass_bar`) et par leur appartenance au split train ou test, obtenu par tirage aléatoire 75/25.
 
 ## Contexte : parcours d'un·e étudiant·e en droit aux États-Unis
 
@@ -98,7 +102,7 @@ Les deux cibles sont corrélées sans que l'une se déduise de l'autre (corréla
 uv run python data/law_school/fetch_law_school.py
 ```
 
-Script idempotent : ré-exécuter ne change pas le contenu des CSV.
+Le script écrit les **quatre** fichiers (régression train/test, classification train/test) en une seule exécution. Idempotent : ré-exécuter ne change pas leur contenu.
 
 ---
 
@@ -113,6 +117,7 @@ Section de référence, pas indispensable pour utiliser les CSV. Utile pour comp
 3. **Binarisation de `racetxt`** vers `z_white` (déjà 0/1 dans la source `damtharvey`, on se contente d'un cast en `int`).
 4. **Renommage** avec préfixes `x_` / `y_` / `z_`.
 5. **Coercition `int`** pour les colonnes binaires (`x_fulltime`, `z_white`, `y_pass_bar`) afin d'éviter les `.0` flottants à la sortie.
+6. **Split aléatoire** 75 % train / 25 % test, appliqué une fois sur les indices et propagé identiquement aux fichiers régression et classification.
 
 ### Variables volontairement exclues
 
