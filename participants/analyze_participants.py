@@ -223,40 +223,7 @@ Format : un seul bloc de 4 à 6 phrases maximum, en prose. **Pas de titre, pas d
     }
 
 
-def one_line_per_participant(client, records: list[dict]) -> dict[int, str]:
-    block = "\n\n".join(
-        f"[{i + 1}] {r['prenom']} {r['nom']} | {r['discipline'] or '?'} | "
-        f"{(r['themes'] or '(pas de thèmes renseignés)')[:600]}"
-        for i, r in enumerate(records)
-    )
-    text = call_llm(
-        client,
-        f"""Pour chacun des {len(records)} stagiaires ci-dessous, produis UNE phrase (maximum 25 mots) résumant ses thématiques de recherche et motivations principales.
-
-Format de sortie STRICT : une ligne par participant, sous la forme exacte :
-[N] résumé en une phrase
-
-Ne saute aucun numéro. N'écris RIEN d'autre que ces lignes numérotées.
-
-{block}""",
-        max_tokens=4096,
-    )
-
-    summaries: dict[int, str] = {}
-    for line in text.splitlines():
-        line = line.strip()
-        if not line.startswith("["):
-            continue
-        try:
-            num_str, summary = line.split("]", 1)
-            num = int(num_str.strip("[ "))
-            summaries[num] = summary.strip(" :-—")
-        except (ValueError, IndexError):
-            continue
-    return summaries
-
-
-def render_markdown(stats: dict, llm_results: dict, records: list[dict], summaries: dict[int, str], has_llm: bool) -> str:
+def render_markdown(stats: dict, llm_results: dict, has_llm: bool) -> str:
     out: list[str] = []
     a = out.append
     total = stats["total"]
@@ -340,32 +307,6 @@ def render_markdown(stats: dict, llm_results: dict, records: list[dict], summari
           "Voir `.env.example` à la racine du repo et relancer.")
         a("")
 
-    a("## 7. Tour de table — fiche par participant")
-    a("")
-    a("Tableau prêt pour l'accueil du lundi matin. Une ligne par participant·e, dans l'ordre du CSV.")
-    a("")
-    a("| # | Prénom Nom | Université | Discipline | Python | R | Thématique en 1 ligne |")
-    a("|---|---|---|---|---|---|---|")
-    for i, r in enumerate(records):
-        num = i + 1
-        py = "✓" if r["python_oui"] else ""
-        rr = "✓" if r["r_oui"] else ""
-        if has_llm:
-            summary = summaries.get(num, "_(résumé LLM manquant)_")
-        else:
-            summary = "_(synthèse LLM désactivée)_"
-        nom_complet = f"{r['prenom']} {r['nom']}".strip()
-        univ = r["universite"] or "?"
-        disc = r["discipline"] or "?"
-        if r["selection"].lower() == "desistement":
-            nom_complet += " *(désistement)*"
-        a(f"| {num} | {nom_complet} | {univ} | {disc} | {py} | {rr} | {summary} |")
-    a("")
-
-    a("---")
-    a("*Ce rapport contient des données personnelles (noms, prénoms, affiliations) — usage interne pédagogique uniquement.*")
-    a("")
-
     return "\n".join(out)
 
 
@@ -384,7 +325,6 @@ def main() -> int:
     has_llm = bool(api_key) and not api_key.startswith("sk-ant-...")
 
     llm_results: dict = {}
-    summaries: dict[int, str] = {}
 
     if has_llm:
         from anthropic import Anthropic
@@ -393,13 +333,11 @@ def main() -> int:
         print("→ Analyses LLM en cours (Claude Haiku 4.5)…")
         llm_results = analyze_text_globally(client, records)
         print("  ✓ synthèses globales générées")
-        summaries = one_line_per_participant(client, records)
-        print(f"  ✓ résumés individuels générés ({len(summaries)}/{len(records)})")
     else:
         print("⚠ ANTHROPIC_API_KEY absente — analyse LLM ignorée (rapport descriptif uniquement).")
 
     OUTPUT_PATH.write_text(
-        render_markdown(stats, llm_results, records, summaries, has_llm),
+        render_markdown(stats, llm_results, has_llm),
         encoding="utf-8",
     )
     print(f"✓ Rapport écrit : {OUTPUT_PATH.relative_to(REPO_ROOT)}")
