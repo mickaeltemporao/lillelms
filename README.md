@@ -89,6 +89,18 @@ Le rapport est écrit dans `participants/analyse_des_participants.md`. Sans clé
 
 > Le CSV brut des candidatures n'est pas fourni dans ce dépôt pour des raisons d'anonymisation des données personnelles (noms, e-mails, motivations détaillées). Seul le rapport synthétique est versionné.
 
+## Datasets
+
+Le dossier `data/` rassemble les scripts qui récupèrent et pré-traitent les datasets utilisés comme « running examples » dans les notebooks. Chaque dataset a son sous-dossier avec un script `fetch_*.py` et un `codebook.md` ; les CSV pré-traités sont versionnés à côté du script.
+
+Pour reconstruire un dataset depuis sa source :
+
+```
+uv run python data/<dataset>/fetch_<dataset>.py
+```
+
+Convention de colonnes : préfixe `x_` pour les features, `y_` pour les cibles, `z_` pour les attributs sensibles (pivots des analyses fairness). Voir `data/README.md` pour les détails.
+
 ## Divers
 - https://www.kaggle.com/learn-guide/5-day-agents
 -
