@@ -4,7 +4,34 @@ Proposition : structurer la journée en 4 blocs de +/- 1h30.
 
 ---
 
-## Bloc 1 | Risques et régulation
+## Bloc 1 | Tout ce que j'ai détesté en IA Gé(nérative)
+
+**Intervenants :** LM
+
+**Format :** Présentation (slides/supports)
+
+### Enjeux sociopolitiques
+
+Repartir des diapos léo sur enjeux pouvoir, travail, etc. et compléter avec les points sur enjeux vol massif données, AI con, évoquer ludite labs, etc.
+
+Cf. illustration inspirations des supports existants :
+
+- AI beyond technology: power and politics
+- Algorithms and society: acceptability, bias, data -> sera plutôt côté Flore
+- AI and the transformation of organizations and work
+
+### (Mé-)usages en recherche
+
+- des exemples du pire pour en dire du mal
+- et évoquer les points suivants en creux et opposition IE illustrer le fait que ça peut être mal fait et donc poser soucis
+  - [intégrer les idées suivantes de Flore par point entrée en recherche]
+  - Privacy & RGPD (anonymisation, risques de ré-identification dans des données apparemment anonymisées)
+  - Fiabilité & Hallucinations des LLM (mécanisme des hallucinations; évaluation des sorties LLM; stratégies de mitigation avec des RAG, prompting structuré, vérification des sources)
+  - [aviser car sans doute au dessus] Impact environnemental (ordres de grandeur; outil `codecarbon` pour mesurer les émissions CO₂ d'un script Python en live; stratégies de réduction comme le choix du modèle)
+
+---
+
+## Bloc 2 | Risques et régulation
 
 **Intervenants :** FV / LM
 
@@ -24,12 +51,11 @@ Présenter des exemples de risques dans l'IA. En voilà quelques uns :
 - AI act : approche fondée sur le risque : inacceptable / haut / limité / minimal
 - Réglementation spécifique aux systèmes GenAI 
 
-
 ---
 
-## Bloc 2 | Fairness
+## Bloc 3 | Fairness
 
-**Intervenant :** FV ?
+**Intervenant :** FV
 
 **Format :** Notebook
 
@@ -47,9 +73,9 @@ Présenter des exemples de risques dans l'IA. En voilà quelques uns :
 
 ---
 
-## Bloc 3 | Explicabilité
+## Bloc 4 | Explicabilité
 
-**Intervenants :** FV ou LM
+**Intervenants :** FV
 
 **Format :** Notebook
 
@@ -63,16 +89,3 @@ Présenter des exemples de risques dans l'IA. En voilà quelques uns :
 - Application : quelles variables influencent une prédiction individuelle ?
 
 
----
-
-## Bloc 4 | Troisième problématique (à choisir)
-
-**Intervenants :** FV ou LM
-
-**Format :** Notebook
-
-Quelques idées pour cette troisième problématique:
-- Privacy & RGPD (anonymisation, risques de ré-identification dans des données apparemment anonymisées)
-- Fiabilité & Hallucinations des LLM (mécanisme des hallucinations; évaluation des sorties LLM; stratégies de mitigation avec des RAG, prompting structuré, vérification des sources)
-- Impact environnemental (ordres de grandeur; outil `codecarbon` pour mesurer les émissions CO₂ d'un script Python en live; stratégies de réduction comme le choix du modèle)
-- Autre ?
