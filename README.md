@@ -91,3 +91,11 @@ Le rapport est écrit dans `participants/analyse_des_participants.md`. Sans clé
 
 ## Divers
 - https://www.kaggle.com/learn-guide/5-day-agents
+-
+
+## TODO
+- retirere uv.lock
+- nettoyer dev depnendencies pyproj
+- uniform names
+
+| **Séance 1**  | [Vive les Claquettes!](https://githubtocolab.com/mickaeltemporao/lillelms/blob/main/ressources/j1/aprem/01-introduction-python.ipynb)   
