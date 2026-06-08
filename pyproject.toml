@@ -4,16 +4,20 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.104.1",
+    "beautifulsoup4>=4.15.0",
     "bertopic>=0.17.4",
+    "gensim>=4.4.0",
     "matplotlib>=3.10.9",
     "openai>=2.40.0",
     "openai-whisper",
     "pandas>=3.0.3",
     "pillow>=12.2.0",
+    "pyarrow>=24.0.0",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
     "scikit-learn>=1.9.0",
     "wikipedia-api>=0.15.0",
+    "wordcloud>=1.9.6",
 ]
 
 [dependency-groups]
