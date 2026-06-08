@@ -20,30 +20,33 @@ Cf. illustration inspirations des supports existants :
 - Algorithms and society: acceptability, bias, data -> sera plutôt côté Flore
 - AI and the transformation of organizations and work
 
+Autres enjeux sociopolitiques :
+- Enfermements des utilisateurs dans leurs idéologies (bulles de filtre). Exemple repris dans ce papier récent : https://www.nature.com/articles/s41586-026-10447-1
+- Désinformation et mésinformation
+
 ### (Mé-)usages en recherche
 
 - des exemples du pire pour en dire du mal
 - et évoquer les points suivants en creux et opposition IE illustrer le fait que ça peut être mal fait et donc poser soucis
   - [intégrer les idées suivantes de Flore par point entrée en recherche]
-  - Privacy & RGPD (anonymisation, risques de ré-identification dans des données apparemment anonymisées)
+  - Privacy & RGPD (anonymisation, risques de ré-identification dans des données apparemment anonymisées) -> RGPD plutôt à discuter dans la partie régulation ?
   - Fiabilité & Hallucinations des LLM (mécanisme des hallucinations; évaluation des sorties LLM; stratégies de mitigation avec des RAG, prompting structuré, vérification des sources)
   - [aviser car sans doute au dessus] Impact environnemental (ordres de grandeur; outil `codecarbon` pour mesurer les émissions CO₂ d'un script Python en live; stratégies de réduction comme le choix du modèle)
 
+### Risques concrets de l'IA (autres que sociopolitique et recherche)
+Présenter des exemples de risques dans l'IA. En voilà quelques uns :
+- Discriminations dans les données et les modèles (ex. COMPAS, génération d'images, données synthétiques qui amplifient les inégalités)
+
 ---
 
-## Bloc 2 | Risques et régulation
+## Bloc 2 | Régulation
 
 **Intervenants :** FV / LM
 
 **Format :** Présentation (slides ou autre support mais à priori pas de code nécessaire) + discussion ouverte avec le groupe (peut-être leur laisser présenter des problématiques qu'ils auraient pu rencontrer de leur côté ?).
 
-### Risques concrets de l'IA
-Présenter des exemples de risques dans l'IA. En voilà quelques uns :
-- Discriminations dans les données et les modèles (ex. COMPAS, génération d'images, données synthétiques qui amplifient les inégalités)
-- Deepfakes
-- Désinformation et mésinformation
-- Hallucinations des LLM
-- Enfermements des utilisateurs dans leurs idéologies
+
+### RGPD
 
 ### AI Act européen
 - Qu'est-ce qui est mis en place au niveau de l'UE pour limiter ces risque et les légiférer : Ethics guidelines for Trustworthy AI (HLEG EU) + AI act
