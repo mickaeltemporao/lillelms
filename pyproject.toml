@@ -8,6 +8,7 @@ dependencies = [
     "bertopic>=0.17.4",
     "gensim>=4.4.0",
     "matplotlib>=3.10.9",
+    "nltk>=3.9.4",
     "openai>=2.40.0",
     "openai-whisper",
     "pandas>=3.0.3",
