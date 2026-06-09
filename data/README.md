@@ -31,3 +31,7 @@ uv run python data/<dataset>/fetch_<dataset>.py
 | Dossier | Description | Cibles | Split |
 |---|---|---|---|
 | `law_school/` | LSAC National Longitudinal Bar Passage Study (Wightman 1998) | `y_zgpa` (régression), `y_pass_bar` (classification) | 75/25 aléatoire |
+| `airbnb/` | Descriptions d'annonces Airbnb (Inside Airbnb), Bruxelles/Paris/Amsterdam, anglais | — (corpus de text mining) | — |
+| `critiques_films/` | Critiques de films notées (Allociné), français | `polarite` (positif/négatif) | 3 000 / 1 000 équilibré |
+
+> Les datasets `airbnb/` et `critiques_films/` sont des **corpus de texte** (running examples du J3 matin, text mining) : ils ne suivent pas la convention `x_`/`y_`/`z_` des datasets prédictifs tabulaires.
