@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Circle
 
 OUT = Path(__file__).resolve().parent
 BLEU, ORANGE, VERT, GRIS = "#2c6fbf", "#e08a1e", "#2e8b57", "#6b7280"
@@ -94,6 +94,43 @@ ax.text(6, 0.15, "On tire un mot selon ces probabilités, on l'ajoute, puis on r
         ha="center", fontsize=9.5, color=GRIS, style="italic")
 fig.savefig(OUT / "m1-generative.png", dpi=130, bbox_inches="tight", facecolor="white")
 plt.close(fig); print("écrit m1-generative.png")
+
+
+# 1.2 Machine Learning statistique : apprendre les règles depuis les données
+fig, ax = base("Machine Learning : apprendre les règles au lieu de les écrire")
+boite(ax, 0.2, 3.9, 2.7, 2.6, "Exemples\nétiquetés\n\n«…immigration…» → RN\n«…salaire…» → LFI",
+      VERT, fc="#eaf5ee", fs=9.5)
+boite(ax, 3.5, 4.2, 2.3, 2.0, "Features 0/1\n« mot présent ? »", GRIS, fs=10.5)
+boite(ax, 6.4, 4.0, 3.4, 2.4, "Le modèle\napprend les poids\n(régression\nlogistique)",
+      BLEU, fc="#eef4fc", bold=True, fs=10.5)
+fleche(ax, 2.9, 5.2, 3.5, 5.2)
+fleche(ax, 5.8, 5.2, 6.4, 5.2)
+ax.text(5, 2.1, "Le modèle découvre tout seul combien chaque mot compte pour chaque parti :\n"
+                "il réinvente les règles de l'IA symbolique, mais en chiffres.",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m1-ml.png")
+
+
+# 1.3 Deep Learning : le réseau apprend lui-même la représentation
+fig, ax = base("Deep Learning : le réseau apprend lui-même les features")
+layers = [3, 5, 4, 4]
+xpos = np.linspace(1.4, 8.6, len(layers))
+coords = [[(x, y) for y in np.linspace(7.2, 2.8, n)] for x, n in zip(xpos, layers)]
+for a, b in zip(coords[:-1], coords[1:]):
+    for x1, y1 in a:
+        for x2, y2 in b:
+            ax.plot([x1, x2], [y1, y2], color="#d1d5db", lw=0.5, zorder=1)
+couleurs = [GRIS, BLEU, BLEU, ORANGE]
+for li, layer in enumerate(coords):
+    for x, y in layer:
+        ax.add_patch(Circle((x, y), 0.22, color=couleurs[li], zorder=3))
+ax.text(xpos[0], 8.1, "entrée\n(texte)", ha="center", fontsize=9.5, color="#374151")
+ax.text((xpos[1] + xpos[2]) / 2, 8.1, "couches cachées\n(représentation apprise)",
+        ha="center", fontsize=9.5, color=BLEU)
+ax.text(xpos[3], 8.1, "sortie\n(parti)", ha="center", fontsize=9.5, color=ORANGE)
+ax.text(5, 1.4, "On ne fabrique plus les features à la main : les couches cachées les apprennent.",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m1-dl.png")
 
 
 # 2.3 Train / test split
