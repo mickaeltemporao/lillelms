@@ -4,7 +4,7 @@
 
 | Fichier | Sujet | Auteur | Licence | Source |
 |---|---|---|---|---|
-| `m1-opener.jpg` | Urne de vote | FutUndBeidl | CC BY 2.0 | Flickr, via Openverse — `live.staticflickr.com/8331/8076635893` |
+| `m1-opener.jpg` | Pions de couleur devant une urne | image fournie par l'intervenant | **à confirmer** | source / licence à préciser |
 | `m2-opener.jpg` | Palais de justice | cygnus921 | CC BY 2.0 | Flickr, via Openverse — `live.staticflickr.com/3893/14731880797` |
 
 Images redimensionnées (largeur 1000 px) pour alléger le dépôt. La licence CC BY 2.0 impose de créditer l'auteur, ce que fait ce fichier.

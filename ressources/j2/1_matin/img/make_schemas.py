@@ -96,17 +96,19 @@ fig.savefig(OUT / "m1-generative.png", dpi=130, bbox_inches="tight", facecolor="
 plt.close(fig); print("écrit m1-generative.png")
 
 
-# 1.2 Machine Learning statistique : apprendre les règles depuis les données
-fig, ax = base("Machine Learning : apprendre les règles au lieu de les écrire")
-boite(ax, 0.2, 3.9, 2.7, 2.6, "Exemples\nétiquetés\n\n«…immigration…» → RN\n«…salaire…» → LFI",
+# 1.2 Machine Learning : apprendre à partir d'exemples déjà classés
+fig, ax = base("Machine Learning : apprendre à partir d'exemples déjà classés")
+boite(ax, 0.2, 3.5, 3.0, 3.1,
+      "Exemples\ndéjà classés\n\n«…immigration…» → RN\n«…salaire…» → LFI\n«…entreprise…» → LR",
       VERT, fc="#eaf5ee", fs=9.5)
-boite(ax, 3.5, 4.2, 2.3, 2.0, "Features 0/1\n« mot présent ? »", GRIS, fs=10.5)
-boite(ax, 6.4, 4.0, 3.4, 2.4, "Le modèle\napprend les poids\n(régression\nlogistique)",
-      BLEU, fc="#eef4fc", bold=True, fs=10.5)
-fleche(ax, 2.9, 5.2, 3.5, 5.2)
-fleche(ax, 5.8, 5.2, 6.4, 5.2)
-ax.text(5, 2.1, "Le modèle découvre tout seul combien chaque mot compte pour chaque parti :\n"
-                "il réinvente les règles de l'IA symbolique, mais en chiffres.",
+boite(ax, 3.8, 4.3, 2.2, 1.6, "La machine\nles examine\net apprend", BLEU, fc="#eef4fc", bold=True, fs=10.5)
+boite(ax, 6.6, 3.5, 3.2, 3.1,
+      "Ce qu'elle déduit\ntoute seule\n\nimmigration → RN\nsalaire → LFI\nentreprise → LR",
+      ORANGE, fc="#fdf1e3", fs=9.5)
+fleche(ax, 3.2, 5.1, 3.8, 5.1)
+fleche(ax, 6.0, 5.1, 6.6, 5.1)
+ax.text(5, 2.0, "On ne lui écrit aucune règle : on lui montre des exemples déjà classés,\n"
+                "et elle retrouve toute seule quels mots annoncent quel parti.",
         ha="center", fontsize=10, color="#374151")
 save(fig, "m1-ml.png")
 
