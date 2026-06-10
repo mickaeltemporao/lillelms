@@ -11,7 +11,7 @@ Images redimensionnées (largeur 1000 px) pour alléger le dépôt. La licence C
 
 ## Schémas de concepts (générés)
 
-`m1-symbolic.png`, `m1-ml.png`, `m1-dl.png`, `m1-transformers.png`, `m1-generative.png`, `m2-split.png`, `m2-overfitting.png`, `m2-confusion.png`
+`m1-symbolic.png`, `m1-ml.png`, `m1-dl.png`, `m1-transformers.png`, `m1-generative.png`, `m2-feature.png`, `m2-cleaning.png`, `m2-split.png`, `m2-overfitting.png`, `m2-confusion.png`, `m2-regression.png`
 
 Générés par [`make_schemas.py`](make_schemas.py) (matplotlib). Aucune dépendance à une image externe, reproductibles :
 

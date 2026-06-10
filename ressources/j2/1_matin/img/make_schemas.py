@@ -191,3 +191,64 @@ ax.set_title("Matrice de confusion : la source d'accuracy, precision, recall",
 ax.tick_params(length=0)
 fig.savefig(OUT / "m2-confusion.png", dpi=130, bbox_inches="tight", facecolor="white")
 plt.close(fig); print("écrit m2-confusion.png")
+
+
+# 2.1 La notion de feature
+fig, ax = base("Une feature : une caractéristique mesurable, mise en chiffres")
+boite(ax, 0.3, 4.1, 2.9, 2.5, "Un·e étudiant·e\n\nnote au test,\nmoyenne, revenu,\ntemps plein…", GRIS, fs=10)
+fleche(ax, 3.2, 5.35, 4.1, 5.35)
+feats = [("note", "37"), ("moyenne", "3.4"), ("revenu", "45k"), ("temps\nplein", "1")]
+x0 = 4.2
+for i, (nom, val) in enumerate(feats):
+    x = x0 + i * 1.45
+    boite(ax, x, 4.5, 1.3, 1.7, f"{nom}\n\n{val}", BLEU, fc="#eef4fc", fs=9.5, bold=True)
+ax.text(x0 + 2 * 1.45 - 0.1, 3.9, "les features (des chiffres)", ha="center", fontsize=10, color=BLEU)
+ax.text(5, 2.2, "Une feature = une caractéristique transformée en chiffre.\n"
+                "Le modèle n'apprend qu'à partir de ces colonnes.", ha="center", fontsize=10, color="#374151")
+save(fig, "m2-feature.png")
+
+
+# 2.2 Nettoyage des données
+def grille(ax, x0, y0, data, bad, cw=1.25, ch=0.7):
+    for r, row in enumerate(data):
+        for c, val in enumerate(row):
+            X, Y = x0 + c * cw, y0 - r * ch
+            isbad = (r, c) in bad
+            ax.add_patch(plt.Rectangle((X, Y), cw, ch, facecolor="#fde2e1" if isbad else "white",
+                                       edgecolor="#cbd5e1", lw=1))
+            ax.text(X + cw / 2, Y + ch / 2, val, ha="center", va="center", fontsize=9,
+                    color="#b91c1c" if isbad else "#1f2937", weight="bold" if isbad else "normal")
+
+fig, ax = base("Nettoyage : des données brutes aux données prêtes à l'emploi")
+brut = [["note", "moy.", "revenu"], ["37", "3,4", "45k"], ["", "3.1", "50k"], ["52", "999", "12k"]]
+propre = [["note", "moy.", "revenu"], ["37", "3.4", "45k"], ["44", "3.1", "50k"], ["52", "3.6", "48k"]]
+grille(ax, 0.6, 6.3, brut, {(1, 1), (2, 0), (3, 1)})
+grille(ax, 6.0, 6.3, propre, set())
+ax.text(2.45, 7.3, "données brutes", ha="center", fontsize=11, color="#b91c1c", weight="bold")
+ax.text(7.85, 7.3, "données propres", ha="center", fontsize=11, color=VERT, weight="bold")
+fleche(ax, 4.4, 5.6, 5.9, 5.6, lw=2.4)
+ax.text(5.15, 6.0, "nettoyage", ha="center", fontsize=10, color=GRIS)
+ax.text(5, 2.6, "On corrige les trous (cases vides), les formats incohérents (« 3,4 » → « 3.4 »)\n"
+                "et les valeurs aberrantes (999) avant de modéliser.", ha="center", fontsize=10, color="#374151")
+save(fig, "m2-cleaning.png")
+
+
+# 2.6 De la classification (discret) à la régression (continu)
+fig, ax = base("De la classification (catégorie) à la régression (valeur continue)")
+boite(ax, 0.6, 5.4, 1.9, 1.2, "passe", VERT, fc="#eaf5ee", bold=True)
+boite(ax, 0.6, 3.8, 1.9, 1.2, "rate", GRIS)
+ax.annotate("", xy=(0.6, 6.0), xytext=(0.0, 6.0), arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=2))
+ax.text(1.55, 2.9, "Classification :\nchoisir une catégorie", ha="center", fontsize=10, color="#374151")
+x1, x2, y = 4.3, 9.5, 5.2
+ax.plot([x1, x2], [y, y], color=GRIS, lw=2)
+for v in range(5):
+    xt = x1 + (x2 - x1) * v / 4
+    ax.plot([xt, xt], [y - 0.12, y + 0.12], color=GRIS, lw=1.5)
+    ax.text(xt, y - 0.5, str(v), ha="center", fontsize=9, color=GRIS)
+xm = x1 + (x2 - x1) * 3.2 / 4
+ax.scatter([xm], [y], s=140, color=ORANGE, zorder=4)
+ax.text(xm, y + 0.6, "moyenne prédite = 3,2", ha="center", fontsize=10, color=ORANGE)
+ax.text(6.9, 2.9, "Régression :\nprédire un nombre", ha="center", fontsize=10, color="#374151")
+ax.text(5, 1.3, "Même démarche ; seule la cible change : une étiquette (passe/rate) ou un nombre.",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m2-regression.png")
