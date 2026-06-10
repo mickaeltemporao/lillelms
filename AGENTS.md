@@ -162,7 +162,6 @@ Common libraries may include:
 * statsmodels
 * requests
 * openai
-* google-generativeai
 * transformers
 
 Avoid requiring GPUs unless explicitly needed.
@@ -183,7 +182,7 @@ Avoid:
 
 Prefer:
 
-* pip install in notebook cells
+* Use UV to install packages in notebook cells
 * Public datasets
 * Self-contained examples
 * Simple authentication workflows
@@ -199,7 +198,7 @@ Never hardcode API keys.
 When demonstrating API usage:
 
 * Use environment variables
-* Use Colab Secrets when appropriate
+* Use OPENAI API and secrets examples when appropriate
 * Provide placeholder examples
 * Explain security best practices
 
@@ -227,7 +226,8 @@ notebooks/
   ...
 
 data/
-  sample_data/
+  raw/
+  tmp/
 ```
 
 ---
