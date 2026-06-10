@@ -45,7 +45,7 @@ def save(fig, nom):
 
 # 1.1 IA symbolique : des règles écrites à la main
 fig, ax = base("IA symbolique : des règles écrites à la main")
-boite(ax, 0.2, 4, 2.7, 2, "Texte\n« défendre\nnos frontières »", GRIS, fs=11)
+boite(ax, 0.2, 4, 2.7, 2, "Texte\n« réduire\nl'immigration »", GRIS, fs=11)
 boite(ax, 3.6, 2.2, 2.8, 5.6, "Règles (mots-clés)\n\nimmigration → RN\nsalaire → LFI\nmarché → LR\nclimat → EELV",
       BLEU, fc="#eef4fc", fs=11)
 boite(ax, 7.3, 4, 2.5, 2, "Parti prédit\nRN", ORANGE, fc="#fdf1e3", fs=12, bold=True)
@@ -58,41 +58,42 @@ save(fig, "m1-symbolic.png")
 
 # 1.4 Transformers : mécanisme d'attention
 fig, ax = base("Mécanisme d'attention : chaque mot regarde les autres")
-mots = ["Je", "dépose", "à", "la", "banque", "près", "de", "la", "rivière"]
-xs = np.linspace(0.7, 9.3, len(mots))
+mots = ["L'", "avocat", "plaide", "devant", "le", "tribunal"]
+xs = np.linspace(0.9, 9.1, len(mots))
 for x, m in zip(xs, mots):
-    couleur = ORANGE if m == "banque" else GRIS
-    boite(ax, x - 0.45, 4.5, 0.9, 1.1, m, couleur, fs=10,
-          fc="#fdf1e3" if m == "banque" else "white")
-src = xs[4]
-poids = {2: .12, 4: 0, 8: .9, 1: .25}  # "banque" attend surtout "rivière"
+    focus = (m == "avocat")
+    boite(ax, x - 0.7, 4.5, 1.4, 1.1, m, ORANGE if focus else GRIS, fs=10,
+          fc="#fdf1e3" if focus else "white", bold=focus)
+src = xs[1]
+poids = {5: .9, 2: .5, 3: .15}  # "avocat" attend surtout "tribunal" et "plaide"
 for j, w in poids.items():
-    if w == 0:
-        continue
-    ax.add_patch(FancyArrowPatch((src, 4.5), (xs[j], 4.5), connectionstyle="arc3,rad=-0.45",
+    ax.add_patch(FancyArrowPatch((src, 5.6), (xs[j], 5.6), connectionstyle="arc3,rad=-0.4",
                  arrowstyle="-|>", mutation_scale=12, linewidth=1 + 4 * w, color=BLEU, alpha=0.7))
-ax.text(5, 2.3, "Le sens de « banque » est fixé par les mots auxquels il prête le plus d'attention\n"
-                "(ici « rivière » : il s'agit d'une berge, pas d'un établissement financier).",
+ax.text(5, 2.3, "Le sens de « avocat » est fixé par les mots auxquels il prête le plus d'attention\n"
+                "(ici « tribunal » et « plaide » : l'homme de loi, pas le fruit).",
         ha="center", fontsize=10, color="#374151")
 save(fig, "m1-transformers.png")
 
 
-# 1.6 IA générative : prédire le mot suivant
-fig, ax = base("IA générative : prédire le mot suivant, encore et encore")
-boite(ax, 0.3, 6.2, 4.2, 1.6, "« Le chat est assis sur le ___ »", GRIS, fs=12)
-boite(ax, 5.4, 6.0, 2.2, 2.0, "modèle\n(transformer)", BLEU, fc="#eef4fc", bold=True)
-fleche(ax, 4.5, 7, 5.4, 7)
-probas = [("canapé", .42), ("tapis", .27), ("toit", .18), ("clavier", .07)]
-y0 = 3.7
+# 1.6 IA générative : prédire le mot suivant (bande horizontale, une seule ligne)
+fig, ax = plt.subplots(figsize=(9, 2.8))
+ax.set_xlim(0, 12); ax.set_ylim(0, 4); ax.axis("off")
+ax.set_title("IA générative : prédire le mot suivant, encore et encore",
+             fontsize=13.5, weight="bold", color="#111827", pad=10)
+boite(ax, 0.2, 1.1, 3.6, 1.8, "« Le chat est\nsur le ___ »", GRIS, fs=12)
+boite(ax, 4.3, 1.2, 2.0, 1.6, "modèle", BLEU, fc="#eef4fc", bold=True)
+fleche(ax, 3.8, 2.0, 4.3, 2.0)
+fleche(ax, 6.3, 2.0, 7.0, 2.0)
+probas = [("canapé", .42), ("tapis", .27), ("toit", .18)]
 for i, (mot, p) in enumerate(probas):
-    y = y0 - i * 0.85
-    ax.add_patch(plt.Rectangle((3.2, y), 5.0 * p, 0.6, color=ORANGE, alpha=0.85))
-    ax.text(3.1, y + 0.3, mot, ha="right", va="center", fontsize=11)
-    ax.text(3.3 + 5.0 * p, y + 0.3, f"{p:.0%}", ha="left", va="center", fontsize=10, color=GRIS)
-fleche(ax, 6.5, 6.0, 5.7, 4.3)
-ax.text(5, 0.2, "On tire un mot selon ces probabilités, on l'ajoute, puis on recommence.",
-        ha="center", fontsize=10, color=GRIS, style="italic")
-save(fig, "m1-generative.png")
+    y = 2.9 - i * 0.95
+    ax.add_patch(plt.Rectangle((8.6, y), 3.0 * p, 0.6, color=ORANGE, alpha=0.85))
+    ax.text(8.5, y + 0.3, mot, ha="right", va="center", fontsize=10)
+    ax.text(8.7 + 3.0 * p, y + 0.3, f"{p:.0%}", ha="left", va="center", fontsize=9, color=GRIS)
+ax.text(6, 0.15, "On tire un mot selon ces probabilités, on l'ajoute, puis on recommence.",
+        ha="center", fontsize=9.5, color=GRIS, style="italic")
+fig.savefig(OUT / "m1-generative.png", dpi=130, bbox_inches="tight", facecolor="white")
+plt.close(fig); print("écrit m1-generative.png")
 
 
 # 2.3 Train / test split
