@@ -1,10 +1,10 @@
 # Crédits des images — J2 matin
 
-## Photos d'ouverture (libres de droits)
+## Images d'ouverture
 
 | Fichier | Sujet | Auteur | Licence | Source |
 |---|---|---|---|---|
-| `m1-opener.jpg` | Pions de couleur devant une urne | image fournie par l'intervenant | **à confirmer** | source / licence à préciser |
+| `m1-opener.jpg` | Pions de couleur devant une urne | générée par IA (ChatGPT / OpenAI), par l'intervenant | sortie OpenAI, réutilisable par son créateur | image générée par IA |
 | `m2-opener.jpg` | Palais de justice | cygnus921 | CC BY 2.0 | Flickr, via Openverse — `live.staticflickr.com/3893/14731880797` |
 
 Images redimensionnées (largeur 1000 px) pour alléger le dépôt. La licence CC BY 2.0 impose de créditer l'auteur, ce que fait ce fichier.
