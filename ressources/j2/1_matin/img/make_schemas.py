@@ -196,13 +196,13 @@ plt.close(fig); print("écrit m2-confusion.png")
 # 2.1 La notion de feature
 fig, ax = base("Une feature : une caractéristique mesurable, mise en chiffres")
 boite(ax, 0.3, 4.1, 2.9, 2.5, "Un·e étudiant·e\n\nnote au test,\nmoyenne, revenu,\ntemps plein…", GRIS, fs=10)
-fleche(ax, 3.2, 5.35, 4.1, 5.35)
-feats = [("note", "37"), ("moyenne", "3.4"), ("revenu", "45k"), ("temps\nplein", "1")]
-x0 = 4.2
+fleche(ax, 3.2, 5.3, 3.95, 5.3)
+feats = [("note", "37"), ("moyenne", "3.4"), ("revenu", "45k"), ("temps plein", "1")]
+x0 = 3.95
 for i, (nom, val) in enumerate(feats):
-    x = x0 + i * 1.45
-    boite(ax, x, 4.5, 1.3, 1.7, f"{nom}\n\n{val}", BLEU, fc="#eef4fc", fs=9.5, bold=True)
-ax.text(x0 + 2 * 1.45 - 0.1, 3.9, "les features (des chiffres)", ha="center", fontsize=10, color=BLEU)
+    x = x0 + i * 1.5
+    boite(ax, x, 4.5, 1.42, 1.6, f"{nom}\n\n{val}", BLEU, fc="#eef4fc", fs=9, bold=True)
+ax.text(6.9, 3.9, "les features (des chiffres)", ha="center", fontsize=10, color=BLEU)
 ax.text(5, 2.2, "Une feature = une caractéristique transformée en chiffre.\n"
                 "Le modèle n'apprend qu'à partir de ces colonnes.", ha="center", fontsize=10, color="#374151")
 save(fig, "m2-feature.png")
