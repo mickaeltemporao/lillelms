@@ -1,0 +1,101 @@
+indice,chaine,date,heure,duree,titre,lien,emission,type
+1,TF1,14/03/2023,10:00:00,00:04:25,ZFE : les nouvelles règles,http://ina.fr/1,Le 13H,Débat
+2,TF1,06/03/2023,12:45:00,00:05:55,Point d'étape sur les ZFE,http://ina.fr/2,Sept à Huit,Reportage
+3,TF1,25/03/2023,13:00:00,00:01:27,Les vignettes Crit'Air en débat,http://ina.fr/3,Sept à Huit,Débat
+4,TF1,17/10/2023,17:00:00,00:04:24,Les vignettes Crit'Air en débat,http://ina.fr/4,Le 20H,Plateau
+5,TF1,24/05/2023,09:30:00,00:07:12,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/5,Sept à Huit,Débat
+6,CNews,18/10/2023,11:15:00,00:07:17,Les ZFE : une punition pour les automobilistes,http://ina.fr/6,Midi News,Reportage
+7,CNews,01/01/2024,09:30:00,00:05:47,Point d'étape sur les ZFE,http://ina.fr/7,Midi News,Débat
+8,TF1,24/03/2023,10:45:00,00:03:56,La ZFE pour réduire la pollution,http://ina.fr/8,Le 13H,Reportage
+9,CNews,24/07/2023,20:00:00,00:07:30,Interdictions de circulation : la gronde,http://ina.fr/9,L'Heure des Pros,Reportage
+10,CNews,21/06/2023,12:30:00,00:03:42,Les ZFE : une punition pour les automobilistes,http://ina.fr/10,Midi News,Chronique
+11,CNews,29/09/2023,08:30:00,00:07:55,Le casse-tête des zones à faibles émissions,http://ina.fr/11,Midi News,Plateau
+12,CNews,30/11/2023,10:30:00,00:08:54,Interdictions de circulation : la gronde,http://ina.fr/12,Punchline,Débat
+13,CNews,15/09/2023,14:45:00,00:07:51,Le casse-tête des zones à faibles émissions,http://ina.fr/13,Punchline,Reportage
+14,TF1,26/01/2023,12:30:00,00:05:19,Le calendrier des interdictions,http://ina.fr/14,Le 13H,Plateau
+15,CNews,04/01/2023,10:15:00,00:07:57,Les ZFE : une punition pour les automobilistes,http://ina.fr/15,L'Heure des Pros,Débat
+16,TF1,22/05/2023,17:15:00,00:02:24,Les vignettes Crit'Air en débat,http://ina.fr/16,Le 13H,Débat
+17,TF1,02/12/2023,11:00:00,00:03:57,Le calendrier des interdictions,http://ina.fr/17,Le 20H,Chronique
+18,CNews,27/01/2023,21:45:00,00:05:50,Les ZFE : une punition pour les automobilistes,http://ina.fr/18,Punchline,Débat
+19,TF1,19/03/2023,18:00:00,00:01:53,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/19,Le 20H,Chronique
+20,CNews,14/09/2023,17:45:00,00:01:58,La ZFE pour réduire la pollution,http://ina.fr/20,Punchline,Reportage
+21,TF1,17/06/2023,09:45:00,00:08:18,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/21,Sept à Huit,Reportage
+22,CNews,16/12/2023,09:30:00,00:07:19,ZFE : colère des artisans de banlieue,http://ina.fr/22,L'Heure des Pros,Débat
+23,CNews,13/11/2023,20:00:00,00:05:36,ZFE : colère des artisans de banlieue,http://ina.fr/23,L'Heure des Pros,Chronique
+24,CNews,22/03/2023,19:15:00,00:04:13,ZFE : colère des artisans de banlieue,http://ina.fr/24,Punchline,Reportage
+25,TF1,22/05/2023,21:45:00,00:05:25,Les vignettes Crit'Air en débat,http://ina.fr/25,Sept à Huit,Chronique
+26,CNews,25/10/2023,21:15:00,00:07:58,ZFE : les nouvelles règles,http://ina.fr/26,Face à l'info,Reportage
+27,CNews,13/06/2023,17:00:00,00:08:26,Point d'étape sur les ZFE,http://ina.fr/27,Punchline,Plateau
+28,CNews,16/06/2023,19:15:00,00:01:31,Le casse-tête des zones à faibles émissions,http://ina.fr/28,Face à l'info,Plateau
+29,TF1,10/08/2023,22:45:00,00:02:10,Les vignettes Crit'Air en débat,http://ina.fr/29,Le 20H,Chronique
+30,CNews,11/11/2023,19:45:00,00:07:30,Interdictions de circulation : la gronde,http://ina.fr/30,Midi News,Reportage
+31,CNews,26/03/2023,22:15:00,00:06:13,Le calendrier des interdictions,http://ina.fr/31,L'Heure des Pros,Reportage
+32,CNews,03/01/2023,19:30:00,00:05:41,Le casse-tête des zones à faibles émissions,http://ina.fr/32,Midi News,Débat
+33,TF1,11/12/2023,22:00:00,00:05:42,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/33,Le 20H,Reportage
+34,TF1,14/01/2023,21:15:00,00:02:20,Les vignettes Crit'Air en débat,http://ina.fr/34,Sept à Huit,Débat
+35,CNews,04/09/2023,09:30:00,00:06:32,Le casse-tête des zones à faibles émissions,http://ina.fr/35,Midi News,Plateau
+36,CNews,26/11/2023,14:00:00,00:09:14,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/36,Punchline,Chronique
+37,CNews,29/10/2023,19:15:00,00:03:37,ZFE : les nouvelles règles,http://ina.fr/37,L'Heure des Pros,Débat
+38,TF1,11/03/2023,21:30:00,00:09:29,Le calendrier des interdictions,http://ina.fr/38,Le 20H,Reportage
+39,CNews,29/03/2023,22:00:00,00:09:36,ZFE : colère des artisans de banlieue,http://ina.fr/39,Midi News,Plateau
+40,TF1,29/01/2023,21:15:00,00:04:44,Les vignettes Crit'Air en débat,http://ina.fr/40,Le 13H,Chronique
+41,CNews,23/12/2023,15:30:00,00:07:58,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/41,Midi News,Reportage
+42,TF1,14/01/2023,19:15:00,00:03:52,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/42,Sept à Huit,Chronique
+43,CNews,12/02/2023,18:15:00,00:05:46,ZFE : les nouvelles règles,http://ina.fr/43,Punchline,Débat
+44,CNews,31/08/2023,11:45:00,00:03:35,La ZFE pour réduire la pollution,http://ina.fr/44,L'Heure des Pros,Reportage
+45,CNews,29/12/2023,15:15:00,00:08:20,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/45,Midi News,Chronique
+46,TF1,26/02/2023,15:30:00,00:07:49,La transition écologique en marche,http://ina.fr/46,Le 13H,Plateau
+47,CNews,08/03/2023,10:45:00,00:04:55,Interdictions de circulation : la gronde,http://ina.fr/47,L'Heure des Pros,Débat
+48,CNews,29/08/2023,11:15:00,00:05:40,Les ZFE : une punition pour les automobilistes,http://ina.fr/48,Face à l'info,Plateau
+49,CNews,06/10/2023,21:45:00,00:04:16,ZFE : les nouvelles règles,http://ina.fr/49,L'Heure des Pros,Plateau
+50,CNews,26/07/2023,08:30:00,00:08:57,La ZFE pour réduire la pollution,http://ina.fr/50,Face à l'info,Débat
+51,TF1,30/04/2023,22:00:00,00:02:15,Point d'étape sur les ZFE,http://ina.fr/51,Le 13H,Chronique
+52,CNews,22/01/2023,21:45:00,00:01:56,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/52,L'Heure des Pros,Reportage
+53,CNews,25/06/2023,15:15:00,00:08:18,La transition écologique en marche,http://ina.fr/53,Midi News,Reportage
+54,TF1,15/05/2023,12:45:00,00:01:43,ZFE : les nouvelles règles,http://ina.fr/54,Le 20H,Chronique
+55,CNews,27/05/2023,16:45:00,00:08:11,Le casse-tête des zones à faibles émissions,http://ina.fr/55,L'Heure des Pros,Reportage
+56,TF1,06/05/2023,17:15:00,00:01:30,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/56,Le 13H,Plateau
+57,TF1,15/08/2023,10:30:00,00:07:31,Le casse-tête des zones à faibles émissions,http://ina.fr/57,Le 20H,Chronique
+58,CNews,10/10/2023,11:15:00,00:04:33,Le casse-tête des zones à faibles émissions,http://ina.fr/58,Punchline,Chronique
+59,CNews,22/06/2023,10:30:00,00:02:39,Le casse-tête des zones à faibles émissions,http://ina.fr/59,Punchline,Débat
+60,TF1,21/01/2023,20:00:00,00:03:44,Le calendrier des interdictions,http://ina.fr/60,Le 13H,Plateau
+61,CNews,04/06/2023,22:30:00,00:07:54,Comment les grandes villes s'adaptent,http://ina.fr/61,Midi News,Débat
+62,CNews,16/08/2023,21:45:00,00:02:52,ZFE : les nouvelles règles,http://ina.fr/62,L'Heure des Pros,Plateau
+63,TF1,24/09/2023,08:00:00,00:04:18,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/63,Le 20H,Débat
+64,CNews,02/05/2023,17:15:00,00:02:23,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/64,Face à l'info,Débat
+65,CNews,18/03/2023,18:45:00,00:09:28,Les ZFE : une punition pour les automobilistes,http://ina.fr/65,Midi News,Chronique
+66,CNews,12/08/2023,17:00:00,00:05:23,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/66,Face à l'info,Plateau
+67,CNews,10/02/2023,11:15:00,00:05:10,Le calendrier des interdictions,http://ina.fr/67,L'Heure des Pros,Débat
+68,TF1,22/02/2023,18:00:00,00:08:28,Les vignettes Crit'Air en débat,http://ina.fr/68,Le 13H,Chronique
+69,TF1,13/11/2023,13:45:00,00:06:53,La transition écologique en marche,http://ina.fr/69,Sept à Huit,Plateau
+70,TF1,02/09/2023,20:30:00,00:03:14,Les ZFE : une punition pour les automobilistes,http://ina.fr/70,Le 20H,Reportage
+71,TF1,26/02/2023,09:00:00,00:07:30,Le calendrier des interdictions,http://ina.fr/71,Le 13H,Débat
+72,CNews,29/12/2023,10:30:00,00:03:32,La ZFE pour réduire la pollution,http://ina.fr/72,Face à l'info,Plateau
+73,TF1,02/07/2023,19:30:00,00:07:41,ZFE : les nouvelles règles,http://ina.fr/73,Sept à Huit,Reportage
+74,CNews,25/09/2023,16:45:00,00:03:19,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/74,Punchline,Plateau
+75,CNews,30/06/2023,14:15:00,00:07:58,Point d'étape sur les ZFE,http://ina.fr/75,Punchline,Plateau
+76,TF1,30/04/2023,14:00:00,00:07:30,ZFE : colère des artisans de banlieue,http://ina.fr/76,Sept à Huit,Chronique
+77,TF1,15/05/2023,09:00:00,00:05:40,Le calendrier des interdictions,http://ina.fr/77,Le 13H,Chronique
+78,TF1,25/07/2023,19:15:00,00:04:16,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/78,Le 13H,Plateau
+79,CNews,10/07/2023,18:30:00,00:04:44,La ZFE pour réduire la pollution,http://ina.fr/79,Punchline,Débat
+80,TF1,28/07/2023,15:30:00,00:02:21,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/80,Le 13H,Chronique
+81,TF1,29/06/2023,09:15:00,00:08:53,Point d'étape sur les ZFE,http://ina.fr/81,Le 13H,Chronique
+82,CNews,15/06/2023,14:45:00,00:09:49,ZFE : colère des artisans de banlieue,http://ina.fr/82,Face à l'info,Débat
+83,TF1,13/06/2023,15:45:00,00:08:11,Point d'étape sur les ZFE,http://ina.fr/83,Le 20H,Plateau
+84,TF1,06/01/2023,19:00:00,00:02:42,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/84,Sept à Huit,Débat
+85,TF1,22/01/2023,16:45:00,00:03:23,Les ZFE : une punition pour les automobilistes,http://ina.fr/85,Le 20H,Plateau
+86,CNews,17/09/2023,09:15:00,00:06:45,Les ZFE : une punition pour les automobilistes,http://ina.fr/86,Punchline,Débat
+87,TF1,19/11/2023,09:45:00,00:08:17,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/87,Sept à Huit,Débat
+88,CNews,12/04/2023,20:15:00,00:08:52,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/88,Midi News,Plateau
+89,CNews,25/06/2023,16:45:00,00:04:32,Le déploiement des zones à faibles émissions s'accélère,http://ina.fr/89,L'Heure des Pros,Plateau
+90,TF1,05/04/2023,22:30:00,00:03:14,Qu'est-ce qu'une zone à faibles émissions ?,http://ina.fr/90,Le 13H,Débat
+91,CNews,11/01/2023,18:45:00,00:04:19,Le casse-tête des zones à faibles émissions,http://ina.fr/91,Midi News,Chronique
+92,CNews,18/09/2023,16:30:00,00:01:18,Interdictions de circulation : la gronde,http://ina.fr/92,Punchline,Débat
+93,TF1,18/12/2023,09:00:00,00:07:19,La ZFE pour réduire la pollution,http://ina.fr/93,Sept à Huit,Chronique
+94,TF1,25/06/2023,20:00:00,00:09:18,Le casse-tête des zones à faibles émissions,http://ina.fr/94,Le 13H,Reportage
+95,TF1,18/12/2023,13:30:00,00:08:59,Interdictions de circulation : la gronde,http://ina.fr/95,Sept à Huit,Débat
+96,CNews,14/05/2023,22:15:00,00:09:45,Écologie punitive : faut-il supprimer les ZFE ?,http://ina.fr/96,Punchline,Plateau
+97,TF1,16/05/2023,19:00:00,00:05:15,Interdictions de circulation : la gronde,http://ina.fr/97,Le 20H,Reportage
+98,CNews,04/05/2023,15:45:00,00:08:32,Interdictions de circulation : la gronde,http://ina.fr/98,Face à l'info,Reportage
+99,TF1,09/06/2023,08:30:00,00:04:59,ZFE : les nouvelles règles,http://ina.fr/99,Sept à Huit,Reportage
+100,CNews,03/04/2023,17:30:00,00:02:14,ZFE : colère des artisans de banlieue,http://ina.fr/100,Face à l'info,Reportage
