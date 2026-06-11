@@ -26,10 +26,6 @@ Régression logistique (`sklearn`, `max_iter=1000`) entraînée sur le **train**
 
 Le modèle reproduit volontairement les disparités du dataset : sur le test, l'accuracy et les taux d'erreur diffèrent nettement selon `z_white`, ce qui donne matière à l'analyse fairness (parité démographique, equalized odds, etc.).
 
-## Régénérer
+## Génération
 
-```bash
-uv run python data/law_school/predict_classification.py
-```
-
-Déterministe : mêmes CSV d'entrée + modèle déterministe => mêmes prédictions (fichiers stables, versionnés).
+Produites par le modèle décrit ci-dessus. Le script de génération est conservé localement (non versionné). Sorties déterministes et stables : mêmes CSV d'entrée + modèle déterministe => mêmes prédictions.
