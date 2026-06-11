@@ -35,3 +35,11 @@ uv run python data/<dataset>/fetch_<dataset>.py
 | `critiques_films/` | Critiques de films notées (Allociné), français | `polarite` (positif/négatif) | 3 000 / 1 000 équilibré |
 
 > Les datasets `airbnb/` et `critiques_films/` sont des **corpus de texte** (running examples du J3 matin, text mining) : ils ne suivent pas la convention `x_`/`y_`/`z_` des datasets prédictifs tabulaires.
+
+## Prédictions pré-générées (fairness)
+
+`law_school/output/` contient des **prédictions de classification déjà générées** (`y_pass_bar`), prêtes pour la séance fairness (modèle, prédictions, probabilités et attribut sensible `z_white`). Voir [`law_school/output/README.md`](law_school/output/README.md). Régénérer :
+
+```bash
+uv run python data/law_school/predict_classification.py
+```
