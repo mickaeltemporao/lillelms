@@ -18,3 +18,8 @@ Générés par [`make_schemas.py`](make_schemas.py) (matplotlib). Aucune dépend
 ```bash
 uv run python ressources/j2/1_matin/img/make_schemas.py
 ```
+
+## Démo Teachable Machine (section 1.2)
+
+- `m1-ml-teachable.jpg` : montage généré par [`make_teachable.py`](make_teachable.py) à partir des photos du dossier `m1-ml-google-teachable-machine/`.
+- `m1-ml-google-teachable-machine/` : photos d'exemple (3 portefeuilles, 3 clés) servant à la démo en direct sur [Teachable Machine](https://teachablemachine.withgoogle.com/train/image). **Provenance / licence à confirmer** par l'intervenant (photos personnelles ou à remplacer par des images libres si besoin).
