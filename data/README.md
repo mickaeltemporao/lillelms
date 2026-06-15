@@ -36,3 +36,7 @@ uv run python data/<dataset>/fetch_<dataset>.py
 | `ina_zfe/` | Métadonnées de l'INA concernant les ZFE (TF1, CNews) | (corpus de text mining) | — |
 
 > Les datasets `airbnb/`, `critiques_films/` et `ina_zfe/` sont des **corpus de texte** (running examples du J2/J3, text mining) : ils ne suivent pas la convention `x_`/`y_`/`z_` des datasets prédictifs tabulaires.
+
+## Prédictions pré-générées (fairness)
+
+`law_school/output/` contient des **prédictions de classification déjà générées** (`y_pass_bar`), prêtes pour la séance fairness (modèle, prédictions, probabilités et attribut sensible `z_white`). Voir [`law_school/output/README.md`](law_school/output/README.md).
