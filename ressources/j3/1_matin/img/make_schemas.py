@@ -38,8 +38,9 @@ def base(titre, figsize=(8, 4.5)):
 
 
 def save(fig, nom):
-    fig.savefig(OUT / nom, dpi=130, bbox_inches="tight", facecolor="white")
-    plt.close(fig); print("écrit", nom)
+    (OUT / nom[:2]).mkdir(exist_ok=True)
+    fig.savefig(OUT / nom[:2] / nom, dpi=130, bbox_inches="tight", facecolor="white")
+    plt.close(fig); print("écrit", nom[:2] + "/" + nom)
 
 
 # Tokenization
@@ -71,8 +72,7 @@ ax.set_yticks(range(len(rows))); ax.set_yticklabels(rows)
 ax.set_title("Bag of words : compter les mots (matrice term-document)",
              fontsize=13, weight="bold", pad=12)
 ax.tick_params(length=0)
-fig.savefig(OUT / "m3-bow.png", dpi=130, bbox_inches="tight", facecolor="white")
-plt.close(fig); print("écrit m3-bow.png")
+save(fig, "m3-bow.png")
 
 
 # Embeddings : espace vectoriel
@@ -94,8 +94,7 @@ ax.set_title("Embeddings : proches par le sens, proches dans l'espace",
              fontsize=13, weight="bold", pad=12)
 ax.text(3.25, -0.15, "Chaque mot devient un vecteur ; les mots de sens voisin se regroupent.",
         ha="center", fontsize=10.5, color="#374151")
-fig.savefig(OUT / "m3-embeddings.png", dpi=130, bbox_inches="tight", facecolor="white")
-plt.close(fig); print("écrit m3-embeddings.png")
+save(fig, "m3-embeddings.png")
 
 
 # Sentiment
@@ -147,5 +146,4 @@ ax.set_title("Recherche sémantique : retrouver par le sens, pas par les mots",
 ax.legend(frameon=False, loc="lower center", ncol=3, fontsize=10)
 ax.text(5, -0.2, "La requête et les textes sont des vecteurs ; on renvoie les plus proches.",
         ha="center", fontsize=10.5, color="#374151")
-fig.savefig(OUT / "m4-search.png", dpi=130, bbox_inches="tight", facecolor="white")
-plt.close(fig); print("écrit m4-search.png")
+save(fig, "m4-search.png")

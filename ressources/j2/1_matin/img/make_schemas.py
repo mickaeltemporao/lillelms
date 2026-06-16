@@ -38,9 +38,10 @@ def base(titre, figsize=(8, 4.5)):
 
 
 def save(fig, nom):
-    fig.savefig(OUT / nom, dpi=130, bbox_inches="tight", facecolor="white")
+    (OUT / nom[:2]).mkdir(exist_ok=True)
+    fig.savefig(OUT / nom[:2] / nom, dpi=130, bbox_inches="tight", facecolor="white")
     plt.close(fig)
-    print("écrit", nom)
+    print("écrit", nom[:2] + "/" + nom)
 
 
 # 1.1 IA symbolique : des règles écrites à la main
@@ -92,8 +93,7 @@ for i, (mot, p) in enumerate(probas):
     ax.text(8.7 + 3.0 * p, y + 0.3, f"{p:.0%}", ha="left", va="center", fontsize=9, color=GRIS)
 ax.text(6, 0.15, "On tire un mot selon ces probabilités, on l'ajoute, puis on recommence.",
         ha="center", fontsize=9.5, color=GRIS, style="italic")
-fig.savefig(OUT / "m1-generative.png", dpi=130, bbox_inches="tight", facecolor="white")
-plt.close(fig); print("écrit m1-generative.png")
+save(fig, "m1-generative.png")
 
 
 # 1.2 Machine Learning : apprendre à partir d'exemples déjà classés
@@ -167,8 +167,7 @@ ax.set_title("Overfitting : l'erreur de test remonte quand le modèle mémorise"
 ax.set_xticks([]); ax.set_yticks([]); ax.legend(frameon=False, loc="upper center")
 for s in ("top", "right"):
     ax.spines[s].set_visible(False)
-fig.savefig(OUT / "m2-overfitting.png", dpi=130, bbox_inches="tight", facecolor="white")
-plt.close(fig); print("écrit m2-overfitting.png")
+save(fig, "m2-overfitting.png")
 
 
 # 2.5 Matrice de confusion
@@ -189,8 +188,7 @@ for k in (0, 1, 2):
 ax.set_title("Matrice de confusion : la source d'accuracy, precision, recall",
              fontsize=13, weight="bold", pad=12)
 ax.tick_params(length=0)
-fig.savefig(OUT / "m2-confusion.png", dpi=130, bbox_inches="tight", facecolor="white")
-plt.close(fig); print("écrit m2-confusion.png")
+save(fig, "m2-confusion.png")
 
 
 # 2.1 La notion de feature
