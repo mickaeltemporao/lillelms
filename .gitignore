@@ -183,3 +183,8 @@ participants/MaJ_QL26_Selection_IA_2026_05_11.csv
 *_files/
 # Script de génération des prédictions fairness (conservé localement)
 data/law_school/predict_classification.py
+
+# Supports de slides (on versionne les .pdf, pas les sources)
+*.key
+*.pptx
+.DS_Store
