@@ -21,6 +21,7 @@ import io
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import requests
 from sklearn.model_selection import train_test_split
@@ -48,6 +49,24 @@ Y_CLS = "y_pass_bar"
 
 TEST_SIZE = 0.25
 SEED = 42
+
+# Données réelles imparfaites : on simule volontairement ~5 % de valeurs
+# manquantes dans deux features de la tâche de classification. C'est fait ici,
+# en amont, pour que les CSV livrés contiennent déjà ces trous : la séance de
+# nettoyage part ainsi de données réalistes, sans étape artificielle visible.
+MISSING_COLUMNS = ["x_lsat", "x_ugpa"]
+MISSING_FRAC = 0.05
+
+
+def inject_missing(frame: pd.DataFrame, seed: int) -> pd.DataFrame:
+    """Insère ~`MISSING_FRAC` de NaN dans `MISSING_COLUMNS` (positions reproductibles)."""
+    frame = frame.reset_index(drop=True)
+    rng = np.random.default_rng(seed)
+    n = len(frame)
+    for col in MISSING_COLUMNS:
+        idx = rng.choice(n, size=int(MISSING_FRAC * n), replace=False)
+        frame.loc[idx, col] = np.nan
+    return frame
 
 
 def download() -> pd.DataFrame:
@@ -114,11 +133,12 @@ def main() -> int:
     reg_cols = X_COLUMNS + [Z_COLUMN, Y_REG]
     cls_cols = X_COLUMNS + [Z_COLUMN, Y_CLS]
 
+    # La régression reste intacte ; on ne troue que la classification (séance nettoyage).
     targets = [
         ("law_school_for_regression_train.csv", train_df[reg_cols]),
         ("law_school_for_regression_test.csv", test_df[reg_cols]),
-        ("law_school_for_classification_train.csv", train_df[cls_cols]),
-        ("law_school_for_classification_test.csv", test_df[cls_cols]),
+        ("law_school_for_classification_train.csv", inject_missing(train_df[cls_cols], seed=0)),
+        ("law_school_for_classification_test.csv", inject_missing(test_df[cls_cols], seed=1)),
     ]
 
     for name, frame in targets:
