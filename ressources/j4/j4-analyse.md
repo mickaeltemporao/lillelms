@@ -80,15 +80,22 @@ Présenter des exemples de risques dans l'IA. En voilà quelques uns :
 
 **Intervenants :** FV
 
-**Format :** Notebook
+**Format :** Présentation (slides) + Notebook
 
-**Problématique :** Les modèles ML performants sont des boîtes noires. Comment expliquer une prédiction individuelle ou le comportement global du modèle ?
+**Problématique :** Les sorties techniques d'un modèle ML (coefficients, valeurs SHAP) sont difficiles à interpréter pour un utilisateur final. Comment les transformer en explications personnalisées et compréhensibles ?
 
-**Dataset :** suite logique sur le dataset Law School (on peut aussi prendre une autre problématique où l'explicabilité est nécessaire comme dans les LLM)
+**Dataset :** Datagotchi Santé — modèle de régression ridge prédisant un score de bien-être (0-100) à partir de 20 questions sur le mode de vie.
+
+**Contenu présentation :**
+- Présentation du projet Datagotchi Santé et de ses résultats
+- Retour sur les méthodes d'explicabilité appliquées au projet et test par les participants des différentes méthodes
+- Discussion collective (Wooclap) sur les méthodes d'explication présentées
 
 **Contenu notebook :**
-- Distinction modèles interprétables (arbres de décision, régression logistique) vs. boîtes noires (forêts aléatoires, gradient boosting)
-- SHAP (SHapley Additive exPlanations) : intuition des valeurs de Shapley, graphiques beeswarm et waterfall (librairie `shap`, compatible scikit-learn)
-- Application : quelles variables influencent une prédiction individuelle ?
+- Pourquoi utiliser un LLM pour générer des explications ? Pipeline : modèle ML → coefficients × réponses utilisateur → LLM → explication en langage naturel
+- Construction d'un prompt structuré (rôle, contexte, tâche, format, calcul des contributions par variable)
+- Appel à l'API OpenAI (`gpt-4o-mini`) et affichage de l'explication générée
+- Hack time (exercices optionnels) : modifier le ton/format, ajouter des recommandations concrètes
+- Limites et enjeux éthiques : qualité du prompt, risque de confabulation, transparence et responsabilité (lien AI Act)
 
 
