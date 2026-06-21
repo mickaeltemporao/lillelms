@@ -20,60 +20,22 @@ Ce module propose d’explorer les fondements et les applications des intelligen
 - Une familiarité avec les concepts de base de l’analyse de données est un atout  
 - Curiosité et intérêt pour les technologies d’IA et leurs impacts sur les sciences sociales
 
-## Programme Brouillon
+## Programme de la formation et Notebooks
 
-### Lundi | Présentation générale
+Ce module est structuré en cinq journées thématiques. Vous pouvez lancer chaque notebook interactif directement dans **Google Colab** en cliquant sur les liens ci-dessous :
 
-Matin : MT/ALL ?
-
-- Accueil des participantes et présentation générale du module
-- Tour de table : identification des attentes et familiarisation avec l’environnement
-
-Après-midi : LM/FV
-
-- Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface
-- Introduction à Python : bases de la programmation et manipulation de données
-- Atelier pratique : configuration de l’environnement cloud
-
-### Mardi | Fondements et applications initiales des IA génératives
-
-Matin : CV
-
-- Session dédiée à la découverte des concepts fondamentaux et du panorama des outils (LLMs, générateurs d’images, etc.). Présentation théorique complétée par des exemples concrets d’applications en sciences sociales.
-
-Après-midi : MT
-
-- Approfondissement de l’ingénierie des prompts et de la prise en main des API (OpenAI, Hugging Face,...?) via un atelier pratique de génération et d’analyse de contenus.
-
-### Mercredi | Analyse et traitement des données textuelles, audio et visuelles
-
-Matin : CV
-
-- Approfondissement de l’analyse des données textuelles et qualitatives dans les recherches en sciences sociales. Introduction à des méthodes d’extraction d’informations et de détection de biais dans des discours.
-
-Après-midi : MT
-
-- Traitement des données audio et visuelles : transcription audio avec Whisper ? et analyse de contenus visuels abordées via des démonstrations et exercices pratiques.
-
-### Jeudi | Personnalisation des modèles et enjeux éthiques
-
-Matin : FV/LM
-
-- Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques.
-
-Après-midi : FV/LM
-
-- Mise en pratique en sous-groupes, orientée vers le développement d’un mini-projet de recherche intégrant des IA génératives.
-
-### Vendredi | Consolidation et perspectives futures
-
-Matin : MT/ALL
-
-- Synthèse générale et une discussion sur les tendances futures des IA génératives en sciences sociales. Retour sur les projets réalisés et la présentation de ressources pour un approfondissement ultérieur.
-
-Après-midi : LM/ALL
-
-- Formation à la configuration d’un environnement de travail personnel : Temps dédié pas-à-pas pour installer et configurer localement les outils.
+| Jour / Séance | Créneau | Intervenant·es | Programme & Supports de cours (Notebooks Colab 🚀) |
+| :--- | :--- | :--- | :--- |
+| **Lundi**<br>_Présentation & Initiation Python_ | **Matin** | MT / ALL | **Accueil & Tour de table**<br>• Accueil des participantes et présentation générale du module<br>• Identification des attentes et familiarisation avec l'environnement |
+| | **Après-midi** | LM / FV | **Initiation à Python & Google Colab**<br>• [01. Introduction à Python pour les SHS](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j1/aprem/01-introduction-python.ipynb)<br>• [02. Types de données et structures](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j1/aprem/02-types-et-structures.ipynb)<br>• [03. Pandas et analyse de données tabulaires](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j1/aprem/03-pandas-crash-course.ipynb) |
+| **Mardi**<br>_Fondements & APIs_ | **Matin** | CV | **Concepts fondamentaux de l'IA & Machine Learning**<br>• Supports : [Introduction to AI (PDF)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j2/1_matin/00-introduction-to-AI.pdf)<br>• [01. 70 ans d'IA en 30 minutes](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j2/1_matin/01-perspective-historique.ipynb)<br>• [02. Fondamentaux du Machine Learning](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j2/1_matin/02-ml-foundations.ipynb) |
+| | **Après-midi** | MT | **Ingénierie des prompts & APIs**<br>• [01. L'API Hour : Collecte de Données Web](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j2/2_aprem/01-l-api-hour.ipynb)<br>• [02. À la recherche du prompt perdu](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j2/2_aprem/02-a-la-recherche-du-prompt-perdu.ipynb) |
+| **Mercredi**<br>_Données qualitatives & multimédias_ | **Matin** | CV | **Analyse qualitative & Text Mining**<br>• Supports : [Introduction to Text Mining (PDF)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j3/1_matin/00-introduction-to-text-mining.pdf)<br>• [01. Text Mining : Les Concepts](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j3/1_matin/01-text-mining-concepts.ipynb)<br>• [02. Text Mining : Applications (Optionnel)](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j3/1_matin/02-text-mining-applications.ipynb) |
+| | **Après-midi** | MT | **Multimodalité & Audio/Visuel**<br>• [XX. Multimodalité & LLMs](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j3/2_aprem/XX-multimodal-analysis.ipynb) (transcription audio avec Whisper & analyse d'images) |
+| **Jeudi**<br>_Personnalisation & Éthique_ | **Matin** | FV / LM | **Adaptation des modèles & Enjeux éthiques**<br>• Adaptation aux contextes spécifiques (santé, éducation, politiques publiques)<br>• Supports : [Gouvernance de l'IA (PPTX)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j4/1_matin/bloc-2-gouvernance-ia.pptx), Inspirations [Cours 1 (PDF)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j4/1_matin/inspiration-cours1.pdf) / [Cours 2 (PDF)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j4/1_matin/inspiration-cours2.pdf) / [Cours 3 (PDF)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j4/1_matin/inspiration-cours3.pdf) |
+| | **Après-midi** | FV / LM | **Équité, explicabilité & Mini-projets**<br>• [01. Équité (Fairness) en classification supervisée](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j4/2_aprem/01-fairness.ipynb)<br>• [03. Générer des explications avec un LLM](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j4/2_aprem/03-generer-explications.ipynb)<br>• Support : [Projet Datagotchi Santé (PPTX)](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j4/2_aprem/02-explicabilite-projet-datagotchi-sante.pptx) |
+| **Vendredi**<br>_Bilan & Perspectives_ | **Matin** | MT / ALL | **Consolidation & Bilan**<br>• Synthèse générale, perspectives futures des IA génératives en sciences sociales et présentation des mini-projets |
+| | **Après-midi** | LM / ALL | **Configuration locale & Autonomie**<br>• Formation à la configuration d'un environnement de travail personnel (installation pas-à-pas en local) |
 
 ## Analyse des participants
 
@@ -101,13 +63,3 @@ uv run python data/<dataset>/fetch_<dataset>.py
 
 Convention de colonnes : préfixe `x_` pour les features, `y_` pour les cibles, `z_` pour les attributs sensibles (pivots des analyses fairness). Voir `data/README.md` pour les détails.
 
-## Divers
-- https://www.kaggle.com/learn-guide/5-day-agents
--
-
-## TODO
-- retirere uv.lock
-- nettoyer dev depnendencies pyproj
-- uniform names
-
-| **Séance 1**  | [Vive les Claquettes!](https://githubtocolab.com/mickaeltemporao/lillelms/blob/main/ressources/j1/aprem/01-introduction-python.ipynb)   
