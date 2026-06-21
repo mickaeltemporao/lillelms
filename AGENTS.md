@@ -182,7 +182,8 @@ Avoid:
 
 Prefer:
 
-* Use UV to install packages in notebook cells
+* Use pip to install packages in notebook cells
+* Use uv for local tests
 * Public datasets
 * Self-contained examples
 * Simple authentication workflows
@@ -197,7 +198,6 @@ Never hardcode API keys.
 
 When demonstrating API usage:
 
-* Use environment variables
 * Use OPENAI API and secrets examples when appropriate
 * Provide placeholder examples
 * Explain security best practices
@@ -207,7 +207,8 @@ Example:
 ```python
 import os
 
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = "sk-votre-cle-secrete-ici"
+
 ```
 
 ---
@@ -237,8 +238,6 @@ data/
 Every notebook should begin with:
 
 * Session title
-* Instructor name(s)
-* Estimated duration
 * Learning objectives
 * Required prerequisites
 * Required packages
