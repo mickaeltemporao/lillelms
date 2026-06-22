@@ -45,7 +45,7 @@ Pour faciliter la collaboration et les échanges :
 
   <a href="https://chat.whatsapp.com/DbFt5py4zfyE5VaJns7y9s"><img src="resources/whatsapp_qr.png" width="250" alt="QR Code WhatsApp"></a>
 
-## 🤖 Conception assistée par IA
+## Utilisation des IA 🤖
 
-Certaines parties du code de ce projet ont été assistées par IA. Ces derniers ont été guidés par les consignes définies dans le fichier [AGENTS.md](AGENTS.md). L'ensemble des programmes et explications reste sous la responsabilité des intervenant·es, qui ont validé chaque étape pour assurer leur intégrité pédagogique.
+Certaines parties de ce projet ont été assistées par IA. Ces derniers ont été guidés par les consignes définies dans le fichier [AGENTS.md](AGENTS.md). L'ensemble des programmes et explications reste sous la responsabilité des intervenant·es, qui ont validé chaque étape pour assurer leur intégrité pédagogique.
 
