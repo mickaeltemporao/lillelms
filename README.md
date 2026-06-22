@@ -14,14 +14,6 @@ LilleLMs a.k.a QuantiLille 2026
 
 Ce module propose d’explorer les fondements et les applications des intelligences artificielles génératives dans le champ des sciences sociales. Conçu pour des participantes débutantes en programmation et curieuses des apports de l’IA en recherche, il offre une double approche. La première partie présente une initiation pratique à Python et la découverte progressive des outils d'analyse et de génération de contenus (textuels, audio, visuels) via des plateformes cloud. La seconde partie est articulée autour d’un focus thématique par jour, permettant d’approfondir chaque grand axe d’application avec des interventions d’expertes lors des demi-journées. L’objectif est d’équiper les chercheuses en sciences sociales de compétences techniques et analytiques permettant d'intégrer les IA génératives dans leurs projets de recherche, que ce soit comme outil d’analyse ou comme objet d’étude.
 
-## Communication & Collaboration
-
-Pour faciliter la collaboration et les échanges :
-- **Prise de [notes collaborative](https://semestriel.framapad.org/p/b38b6kzxms-alxk)** 
-- **Groupe [WhatsApp LilleLMs](https://chat.whatsapp.com/DbFt5py4zfyE5VaJns7y9s)** 
-
-  <img src="ressources/whatsapp_qr.png" width="150" alt="QR Code WhatsApp">
-
 ## Prérequis
 
 - Un compte **Google** est nécessaire pour utiliser **Google Colab**. Cette solution facilite la prise en main des notebooks dans un premier temps. En fin de semaine, nous apprendrons à configurer un environnement de travail local afin de pouvoir travailler de manière autonome.
@@ -44,4 +36,12 @@ Ce module est structuré en cinq journées thématiques. Vous pouvez lancer chaq
 | Jeudi PM | FV | **Équité & explicabilité** | [- Équité](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j4/2_aprem/01-fairness.ipynb)<br>[Explications & LLM](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/ressources/j4/2_aprem/03-generer-explications.ipynb)<br>[Datagotchi Santé](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j4/2_aprem/02-explicabilite-projet-datagotchi-sante.pptx) |
 | Vendredi AM | LM | **Synthèse & perspectives**| [- Clôture](https://github.com/mickaeltemporao/lillelms/blob/main/ressources/j5/2_aprem/J5_slides.html)  |
 | Vendredi PM | ALL | **Configuration locale & autonomie**| |
+
+## Communication & Collaboration
+
+Pour faciliter la collaboration et les échanges :
+- **Prise de [notes collaborative](https://semestriel.framapad.org/p/b38b6kzxms-alxk)** 
+- **Groupe [WhatsApp LilleLMs](https://chat.whatsapp.com/DbFt5py4zfyE5VaJns7y9s)** 
+
+  <img src="ressources/whatsapp_qr.png" width="150" alt="QR Code WhatsApp">
 
