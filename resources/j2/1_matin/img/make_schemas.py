@@ -1,0 +1,252 @@
+"""Génère les schémas de concepts des notebooks J2 matin (modules 1 et 2).
+
+Schémas reproductibles (licence propre, pas de dépendance à une image externe).
+Lancer :  uv run python ressources/j2/1_matin/img/make_schemas.py
+Sortie :  m1-symbolic.png, m1-transformers.png, m1-generative.png,
+          m2-split.png, m2-overfitting.png, m2-confusion.png
+"""
+from pathlib import Path
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Circle
+
+OUT = Path(__file__).resolve().parent
+BLEU, ORANGE, VERT, GRIS = "#2c6fbf", "#e08a1e", "#2e8b57", "#6b7280"
+plt.rcParams.update({"font.size": 12, "font.family": "DejaVu Sans"})
+
+
+def boite(ax, x, y, w, h, texte, couleur=BLEU, fc="white", fs=12, bold=False):
+    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.02,rounding_size=0.04",
+                                linewidth=1.8, edgecolor=couleur, facecolor=fc))
+    ax.text(x + w / 2, y + h / 2, texte, ha="center", va="center", fontsize=fs,
+            color="#1f2937", weight="bold" if bold else "normal", wrap=True)
+
+
+def fleche(ax, x1, y1, x2, y2, couleur=GRIS, lw=2):
+    ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="-|>", mutation_scale=16,
+                                 linewidth=lw, color=couleur, shrinkA=2, shrinkB=2))
+
+
+def base(titre, figsize=(8, 4.5)):
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.set_xlim(0, 10); ax.set_ylim(0, 10); ax.axis("off")
+    ax.set_title(titre, fontsize=14, weight="bold", color="#111827", pad=12)
+    return fig, ax
+
+
+def save(fig, nom):
+    (OUT / nom[:2]).mkdir(exist_ok=True)
+    fig.savefig(OUT / nom[:2] / nom, dpi=130, bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    print("écrit", nom[:2] + "/" + nom)
+
+
+# 1.1 IA symbolique : des règles écrites à la main
+fig, ax = base("IA symbolique : des règles écrites à la main")
+boite(ax, 0.2, 4, 2.7, 2, "Texte\n« réduire\nl'immigration »", GRIS, fs=11)
+boite(ax, 3.6, 2.2, 2.8, 5.6, "Règles (mots-clés)\n\nimmigration → RN\nsalaire → LFI\nmarché → LR\nclimat → EELV",
+      BLEU, fc="#eef4fc", fs=11)
+boite(ax, 7.3, 4, 2.5, 2, "Parti prédit\nRN", ORANGE, fc="#fdf1e3", fs=12, bold=True)
+fleche(ax, 2.9, 5, 3.6, 5)
+fleche(ax, 6.4, 5, 7.3, 5)
+ax.text(5, 1.2, "L'humain écrit la liste de mots-clés ; la machine se contente de compter.",
+        ha="center", fontsize=10, color=GRIS, style="italic")
+save(fig, "m1-symbolic.png")
+
+
+# 1.4 Transformers : mécanisme d'attention
+fig, ax = base("Mécanisme d'attention : chaque mot regarde les autres")
+mots = ["L'", "avocat", "plaide", "devant", "le", "tribunal"]
+xs = np.linspace(0.9, 9.1, len(mots))
+for x, m in zip(xs, mots):
+    focus = (m == "avocat")
+    boite(ax, x - 0.7, 4.5, 1.4, 1.1, m, ORANGE if focus else GRIS, fs=10,
+          fc="#fdf1e3" if focus else "white", bold=focus)
+src = xs[1]
+poids = {5: .9, 2: .5, 3: .15}  # "avocat" attend surtout "tribunal" et "plaide"
+for j, w in poids.items():
+    ax.add_patch(FancyArrowPatch((src, 5.6), (xs[j], 5.6), connectionstyle="arc3,rad=-0.4",
+                 arrowstyle="-|>", mutation_scale=12, linewidth=1 + 4 * w, color=BLEU, alpha=0.7))
+ax.text(5, 2.3, "Le sens de « avocat » est fixé par les mots auxquels il prête le plus d'attention\n"
+                "(ici « tribunal » et « plaide » : l'homme de loi, pas le fruit).",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m1-transformers.png")
+
+
+# 1.6 IA générative : prédire le mot suivant (bande horizontale, une seule ligne)
+fig, ax = plt.subplots(figsize=(9, 2.8))
+ax.set_xlim(0, 12); ax.set_ylim(0, 4); ax.axis("off")
+ax.set_title("IA générative : prédire le mot suivant, encore et encore",
+             fontsize=13.5, weight="bold", color="#111827", pad=10)
+boite(ax, 0.2, 1.1, 3.6, 1.8, "« Le chat est\nsur le ___ »", GRIS, fs=12)
+boite(ax, 4.3, 1.2, 2.0, 1.6, "modèle", BLEU, fc="#eef4fc", bold=True)
+fleche(ax, 3.8, 2.0, 4.3, 2.0)
+fleche(ax, 6.3, 2.0, 7.0, 2.0)
+probas = [("canapé", .42), ("tapis", .27), ("toit", .18)]
+for i, (mot, p) in enumerate(probas):
+    y = 2.9 - i * 0.95
+    ax.add_patch(plt.Rectangle((8.6, y), 3.0 * p, 0.6, color=ORANGE, alpha=0.85))
+    ax.text(8.5, y + 0.3, mot, ha="right", va="center", fontsize=10)
+    ax.text(8.7 + 3.0 * p, y + 0.3, f"{p:.0%}", ha="left", va="center", fontsize=9, color=GRIS)
+ax.text(6, 0.15, "On tire un mot selon ces probabilités, on l'ajoute, puis on recommence.",
+        ha="center", fontsize=9.5, color=GRIS, style="italic")
+save(fig, "m1-generative.png")
+
+
+# 1.2 Machine Learning : apprendre à partir d'exemples déjà classés
+fig, ax = base("Machine Learning : apprendre à partir d'exemples déjà classés")
+boite(ax, 0.2, 3.5, 3.0, 3.1,
+      "Exemples\ndéjà classés\n\n«…immigration…» → RN\n«…salaire…» → LFI\n«…entreprise…» → LR",
+      VERT, fc="#eaf5ee", fs=9.5)
+boite(ax, 3.8, 4.3, 2.2, 1.6, "La machine\nles examine\net apprend", BLEU, fc="#eef4fc", bold=True, fs=10.5)
+boite(ax, 6.6, 3.5, 3.2, 3.1,
+      "Ce qu'elle déduit\ntoute seule\n\nimmigration → RN\nsalaire → LFI\nentreprise → LR",
+      ORANGE, fc="#fdf1e3", fs=9.5)
+fleche(ax, 3.2, 5.1, 3.8, 5.1)
+fleche(ax, 6.0, 5.1, 6.6, 5.1)
+ax.text(5, 2.0, "On ne lui écrit aucune règle : on lui montre des exemples déjà classés,\n"
+                "et elle retrouve toute seule quels mots annoncent quel parti.",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m1-ml.png")
+
+
+# 1.3 Deep Learning : le réseau apprend lui-même la représentation
+fig, ax = base("Deep Learning : le réseau apprend lui-même les features")
+layers = [3, 5, 4, 4]
+xpos = np.linspace(1.4, 8.6, len(layers))
+coords = [[(x, y) for y in np.linspace(7.2, 2.8, n)] for x, n in zip(xpos, layers)]
+for a, b in zip(coords[:-1], coords[1:]):
+    for x1, y1 in a:
+        for x2, y2 in b:
+            ax.plot([x1, x2], [y1, y2], color="#d1d5db", lw=0.5, zorder=1)
+couleurs = [GRIS, BLEU, BLEU, ORANGE]
+for li, layer in enumerate(coords):
+    for x, y in layer:
+        ax.add_patch(Circle((x, y), 0.22, color=couleurs[li], zorder=3))
+ax.text(xpos[0], 8.1, "entrée\n(texte)", ha="center", fontsize=9.5, color="#374151")
+ax.text((xpos[1] + xpos[2]) / 2, 8.1, "couches cachées\n(représentation apprise)",
+        ha="center", fontsize=9.5, color=BLEU)
+ax.text(xpos[3], 8.1, "sortie\n(parti)", ha="center", fontsize=9.5, color=ORANGE)
+ax.text(5, 1.4, "On ne fabrique plus les features à la main : les couches cachées les apprennent.",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m1-dl.png")
+
+
+# 2.3 Train / test split
+fig, ax = base("Train / test : apprendre, puis évaluer sur des données jamais vues")
+ax.add_patch(plt.Rectangle((0.6, 5), 6.6, 1.6, color=BLEU, alpha=0.85))
+ax.add_patch(plt.Rectangle((7.2, 5), 2.2, 1.6, color=ORANGE, alpha=0.85))
+ax.text(3.9, 5.8, "entraînement (75 %)", ha="center", va="center", color="white", fontsize=12, weight="bold")
+ax.text(8.3, 5.8, "test (25 %)", ha="center", va="center", color="white", fontsize=11, weight="bold")
+ax.text(3.9, 4.3, "le modèle apprend ici", ha="center", fontsize=10, color=BLEU)
+ax.text(8.3, 4.3, "on le juge ici", ha="center", fontsize=10, color=ORANGE)
+ax.text(5, 2.6, "Tout le dataset, mélangé puis coupé en deux.\n"
+                "On ne regarde JAMAIS le test pendant l'apprentissage.",
+        ha="center", fontsize=11, color="#374151")
+save(fig, "m2-split.png")
+
+
+# 2.4 Overfitting
+fig, ax = plt.subplots(figsize=(8, 4.5))
+x = np.linspace(1, 10, 200)
+train = 1.0 / x + 0.04
+test = 0.18 + 0.55 * (x / 10 - 0.42) ** 2
+ax.plot(x, train, color=BLEU, lw=2.4, label="erreur sur le train")
+ax.plot(x, test, color=ORANGE, lw=2.4, label="erreur sur le test")
+xb = x[np.argmin(test)]
+ax.axvline(xb, color=GRIS, ls="--", lw=1.3)
+ax.text(xb, 0.62, "  bon compromis", color=GRIS, fontsize=10, va="top")
+ax.annotate("le modèle mémorise\n(overfitting)", xy=(9.2, test[-1]), xytext=(6.4, 0.5),
+            fontsize=10, color="#374151", arrowprops=dict(arrowstyle="->", color=GRIS))
+ax.set_xlabel("complexité du modèle"); ax.set_ylabel("erreur")
+ax.set_title("Overfitting : l'erreur de test remonte quand le modèle mémorise",
+             fontsize=13, weight="bold", pad=12)
+ax.set_xticks([]); ax.set_yticks([]); ax.legend(frameon=False, loc="upper center")
+for s in ("top", "right"):
+    ax.spines[s].set_visible(False)
+save(fig, "m2-overfitting.png")
+
+
+# 2.5 Matrice de confusion
+fig, ax = plt.subplots(figsize=(7.2, 4.8))
+cm = np.array([[62, 8], [10, 20]])
+labels = np.array([["VP\n(vrai positif)", "FN\n(faux négatif)"],
+                   ["FP\n(faux positif)", "VN\n(vrai négatif)"]])
+ax.imshow([[1, 0], [0, 1]], cmap="Blues", alpha=0.18, extent=(0, 2, 0, 2))
+for i in range(2):
+    for j in range(2):
+        ax.text(j + 0.5, 1.5 - i, f"{labels[i, j]}\n{cm[i, j]}", ha="center", va="center",
+                fontsize=12, weight="bold", color="#1f2937")
+ax.set_xticks([0.5, 1.5]); ax.set_xticklabels(["prédit : passe", "prédit : rate"])
+ax.set_yticks([1.5, 0.5]); ax.set_yticklabels(["réel : passe", "réel : rate"])
+ax.set_xlim(0, 2); ax.set_ylim(0, 2)
+for k in (0, 1, 2):
+    ax.axhline(k, color="white", lw=2); ax.axvline(k, color="white", lw=2)
+ax.set_title("Matrice de confusion : la source d'accuracy, precision, recall",
+             fontsize=13, weight="bold", pad=12)
+ax.tick_params(length=0)
+save(fig, "m2-confusion.png")
+
+
+# 2.1 La notion de feature
+fig, ax = base("Une feature : une caractéristique mesurable, mise en chiffres")
+boite(ax, 0.3, 4.1, 2.9, 2.5, "Un·e étudiant·e\n\nnote au test,\nmoyenne, revenu,\ntemps plein…", GRIS, fs=10)
+fleche(ax, 3.2, 5.3, 3.95, 5.3)
+feats = [("note", "37"), ("moyenne", "3.4"), ("revenu", "45k"), ("temps plein", "1")]
+x0 = 3.95
+for i, (nom, val) in enumerate(feats):
+    x = x0 + i * 1.5
+    boite(ax, x, 4.5, 1.42, 1.6, f"{nom}\n\n{val}", BLEU, fc="#eef4fc", fs=9, bold=True)
+ax.text(6.9, 3.9, "les features (des chiffres)", ha="center", fontsize=10, color=BLEU)
+ax.text(5, 2.2, "Une feature = une caractéristique transformée en chiffre.\n"
+                "Le modèle n'apprend qu'à partir de ces colonnes.", ha="center", fontsize=10, color="#374151")
+save(fig, "m2-feature.png")
+
+
+# 2.2 Nettoyage des données
+def grille(ax, x0, y0, data, bad, cw=1.25, ch=0.7):
+    for r, row in enumerate(data):
+        for c, val in enumerate(row):
+            X, Y = x0 + c * cw, y0 - r * ch
+            isbad = (r, c) in bad
+            ax.add_patch(plt.Rectangle((X, Y), cw, ch, facecolor="#fde2e1" if isbad else "white",
+                                       edgecolor="#cbd5e1", lw=1))
+            ax.text(X + cw / 2, Y + ch / 2, val, ha="center", va="center", fontsize=9,
+                    color="#b91c1c" if isbad else "#1f2937", weight="bold" if isbad else "normal")
+
+fig, ax = base("Nettoyage : des données brutes aux données prêtes à l'emploi")
+brut = [["note", "moy.", "revenu"], ["37", "3,4", "45k"], ["", "3.1", "50k"], ["52", "999", "12k"]]
+propre = [["note", "moy.", "revenu"], ["37", "3.4", "45k"], ["44", "3.1", "50k"], ["52", "3.6", "48k"]]
+grille(ax, 0.6, 6.3, brut, {(1, 1), (2, 0), (3, 1)})
+grille(ax, 6.0, 6.3, propre, set())
+ax.text(2.45, 7.3, "données brutes", ha="center", fontsize=11, color="#b91c1c", weight="bold")
+ax.text(7.85, 7.3, "données propres", ha="center", fontsize=11, color=VERT, weight="bold")
+fleche(ax, 4.4, 5.6, 5.9, 5.6, lw=2.4)
+ax.text(5.15, 6.0, "nettoyage", ha="center", fontsize=10, color=GRIS)
+ax.text(5, 2.6, "On corrige les trous (cases vides), les formats incohérents (« 3,4 » → « 3.4 »)\n"
+                "et les valeurs aberrantes (999) avant de modéliser.", ha="center", fontsize=10, color="#374151")
+save(fig, "m2-cleaning.png")
+
+
+# 2.6 De la classification (discret) à la régression (continu)
+fig, ax = base("De la classification (catégorie) à la régression (valeur continue)")
+boite(ax, 0.6, 5.4, 1.9, 1.2, "passe", VERT, fc="#eaf5ee", bold=True)
+boite(ax, 0.6, 3.8, 1.9, 1.2, "rate", GRIS)
+ax.annotate("", xy=(0.6, 6.0), xytext=(0.0, 6.0), arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=2))
+ax.text(1.55, 2.9, "Classification :\nchoisir une catégorie", ha="center", fontsize=10, color="#374151")
+x1, x2, y = 4.3, 9.5, 5.2
+ax.plot([x1, x2], [y, y], color=GRIS, lw=2)
+for v in range(5):
+    xt = x1 + (x2 - x1) * v / 4
+    ax.plot([xt, xt], [y - 0.12, y + 0.12], color=GRIS, lw=1.5)
+    ax.text(xt, y - 0.5, str(v), ha="center", fontsize=9, color=GRIS)
+xm = x1 + (x2 - x1) * 3.2 / 4
+ax.scatter([xm], [y], s=140, color=ORANGE, zorder=4)
+ax.text(xm, y + 0.6, "moyenne prédite = 3,2", ha="center", fontsize=10, color=ORANGE)
+ax.text(6.9, 2.9, "Régression :\nprédire un nombre", ha="center", fontsize=10, color="#374151")
+ax.text(5, 1.3, "Même démarche ; seule la cible change : une étiquette (passe/rate) ou un nombre.",
+        ha="center", fontsize=10, color="#374151")
+save(fig, "m2-regression.png")

@@ -1,6 +1,6 @@
 # Exploration et Applications des IA Génératives en Sciences Sociales
 
-a.k.a LilleLMs | Organisation QuantiLille 2026
+LilleLMs a.k.a QuantiLille 2026
 
 22-26 juin 2026
 
@@ -8,7 +8,7 @@ a.k.a LilleLMs | Organisation QuantiLille 2026
 - [Léo Mignot (LM)](leo.mignot[at]cnrs.fr)
 - [Mickael Temporão (MT)](m.temporao[at]sciencespobordeaux.fr)
 - [Flore Vancompernolle Vromman (FV)](flore.vancompernolle[at]uclouvain.be)
-- [Corentin Vande Kerckhove (DV)](corentin.vandekerckhove[at]uclouvain.be)
+- [Corentin Vande Kerckhove (CV)](corentin.vandekerckhove[at]uclouvain.be)
 
 ## Description
 
@@ -16,98 +16,32 @@ Ce module propose d’explorer les fondements et les applications des intelligen
 
 ## Prérequis
 
-- Aucune connaissance préalable en Python n'est requise  
-- Une familiarité avec les concepts de base de l’analyse de données est un atout  
-- Curiosité et intérêt pour les technologies d’IA et leurs impacts sur les sciences sociales
+- Un compte **Google** est nécessaire pour utiliser **Google Colab**. Cette solution facilite la prise en main des notebooks dans un premier temps. En fin de semaine, nous apprendrons à configurer un environnement de travail local afin de pouvoir travailler de manière autonome.
+- Aucune connaissance préalable en Python n'est requise.
+- Une familiarité avec les concepts de base de l’analyse de données est un atout.
 
-## Programme Brouillon
+## Programme
 
-### Lundi | Présentation générale
+Ce module est structuré en cinq journées thématiques. Vous pouvez lancer chaque notebook interactif directement dans **Google Colab** en cliquant sur les liens ci-dessous :
 
-Matin : MT/ALL ?
+| Séance | Intervenant.es | ODJ | Supports |
+| :--- | :--- | :--- | :--- |
+| Lundi AM | AC | **Accueil PUDL & PROGEDO**<br> | |
+| Lundi PM | LM & FV | **Initiation à Python** | [- Introduction à Python](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j1/2_aprem/01-introduction-python.ipynb)<br>[- Données & structures](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j1/2_aprem/02-types-et-structures.ipynb)<br>[- Vive les pandas](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j1/2_aprem/03-pandas-crash-course.ipynb) |
+| Mardi AM | CV | **Fondements ML & IA** | [- Introduction à l'IA](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j2/1_matin/00-introduction-to-AI.pdf)<br>[- 70 ans d'IA en 30 min.](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j2/1_matin/01-perspective-historique.ipynb)<br>[- Machine Learning](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j2/1_matin/02-ml-foundations.ipynb) |
+| Mardi PM | MT | **APIs & prompt engineering** | [- API Hour](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j2/2_aprem/01-l-api-hour.ipynb)<br>[- Prompt engineering](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j2/2_aprem/02-a-la-recherche-du-prompt-perdu.ipynb) |
+| Mercredi AM | CV | **Analyse de données textuelles** | [- Text Mining Intro](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j3/1_matin/00-introduction-to-text-mining.pdf)<br>[- Text Mining Concepts](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j3/1_matin/01-text-mining-concepts.ipynb)<br>[- Text Mining Applications](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j3/1_matin/02-text-mining-applications.ipynb) |
+| Mercredi PM | MT | **Vers la multimodalité** | [- Multimodalité I]()<br> [- Multimodalité II ]()|
+| Jeudi AM | LM & FV | **Enjeux éthiques & régulation** | [- Gouvernance de l'IA](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j4/1_matin/bloc-2-gouvernance-ia.pdf)<br>|
+| Jeudi PM | FV | **Équité & explicabilité** | [- Équité](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j4/2_aprem/01-fairness.ipynb)<br>[- Explications & LLM](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j4/2_aprem/03-generer-explications.ipynb)<br>[- Datagotchi Santé](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j4/2_aprem/02-explicabilite-projet-datagotchi-sante.pdf) |
+| Vendredi AM | LM | **Synthèse & perspectives**| [- Clôture](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j5/2_aprem/J5_slides.html)  |
+| Vendredi PM | ALL | **Configuration locale & autonomie**| |
 
-- Accueil des participantes et présentation générale du module
-- Tour de table : identification des attentes et familiarisation avec l’environnement
+## Communication & Collaboration
 
-Après-midi : LM/FV
+Pour faciliter la collaboration et les échanges :
+- **Prise de [notes collaborative](https://semestriel.framapad.org/p/b38b6kzxms-alxk)** 
+- **Groupe [WhatsApp LilleLMs](https://chat.whatsapp.com/DbFt5py4zfyE5VaJns7y9s)** 
 
-- Initiation à la plateforme cloud (Google Colab ou SSP Cloud/Onyxia ?) et prise en main de l’interface
-- Introduction à Python : bases de la programmation et manipulation de données
-- Atelier pratique : configuration de l’environnement cloud
+  <a href="https://chat.whatsapp.com/DbFt5py4zfyE5VaJns7y9s"><img src="resources/whatsapp_qr.png" width="250" alt="QR Code WhatsApp"></a>
 
-### Mardi | Fondements et applications initiales des IA génératives
-
-Matin : CV
-
-- Session dédiée à la découverte des concepts fondamentaux et du panorama des outils (LLMs, générateurs d’images, etc.). Présentation théorique complétée par des exemples concrets d’applications en sciences sociales.
-
-Après-midi : MT
-
-- Approfondissement de l’ingénierie des prompts et de la prise en main des API (OpenAI, Hugging Face,...?) via un atelier pratique de génération et d’analyse de contenus.
-
-### Mercredi | Analyse et traitement des données textuelles, audio et visuelles
-
-Matin : CV
-
-- Approfondissement de l’analyse des données textuelles et qualitatives dans les recherches en sciences sociales. Introduction à des méthodes d’extraction d’informations et de détection de biais dans des discours.
-
-Après-midi : MT
-
-- Traitement des données audio et visuelles : transcription audio avec Whisper ? et analyse de contenus visuels abordées via des démonstrations et exercices pratiques.
-
-### Jeudi | Personnalisation des modèles et enjeux éthiques
-
-Matin : FV/LM
-
-- Séance sur l’adaptation personnalisée des modèles de génération aux contextes spécifiques (santé, éducation, politiques publiques) et sur la compréhension des enjeux techniques et éthiques.
-
-Après-midi : FV/LM
-
-- Mise en pratique en sous-groupes, orientée vers le développement d’un mini-projet de recherche intégrant des IA génératives.
-
-### Vendredi | Consolidation et perspectives futures
-
-Matin : MT/ALL
-
-- Synthèse générale et une discussion sur les tendances futures des IA génératives en sciences sociales. Retour sur les projets réalisés et la présentation de ressources pour un approfondissement ultérieur.
-
-Après-midi : LM/ALL
-
-- Formation à la configuration d’un environnement de travail personnel : Temps dédié pas-à-pas pour installer et configurer localement les outils.
-
-## Analyse des participants
-
-Le dossier `participants/` contient un script qui génère un rapport synthétique sur les stagiaires sélectionnés. Les dépendances Python du repo sont gérées avec [`uv`](https://docs.astral.sh/uv/). Fournir la clé `ANTHROPIC_API_KEY` via un fichier `.env` à la racine (voir `.env.example`).
-
-```
-cp .env.example .env   # puis renseigner ANTHROPIC_API_KEY
-uv sync
-uv run python participants/analyze_participants.py
-```
-
-Le rapport est écrit dans `participants/analyse_des_participants.md`. Sans clé API, le rapport est généré en mode descriptif uniquement (sans synthèse LLM des champs texte libre).
-
-> Le CSV brut des candidatures n'est pas fourni dans ce dépôt pour des raisons d'anonymisation des données personnelles (noms, e-mails, motivations détaillées). Seul le rapport synthétique est versionné.
-
-## Datasets
-
-Le dossier `data/` rassemble les scripts qui récupèrent et pré-traitent les datasets utilisés comme « running examples » dans les notebooks. Chaque dataset a son sous-dossier avec un script `fetch_*.py` et un `codebook.md` ; les CSV pré-traités sont versionnés à côté du script.
-
-Pour reconstruire un dataset depuis sa source :
-
-```
-uv run python data/<dataset>/fetch_<dataset>.py
-```
-
-Convention de colonnes : préfixe `x_` pour les features, `y_` pour les cibles, `z_` pour les attributs sensibles (pivots des analyses fairness). Voir `data/README.md` pour les détails.
-
-## Divers
-- https://www.kaggle.com/learn-guide/5-day-agents
--
-
-## TODO
-- retirere uv.lock
-- nettoyer dev depnendencies pyproj
-- uniform names
-
-| **Séance 1**  | [Vive les Claquettes!](https://githubtocolab.com/mickaeltemporao/lillelms/blob/main/ressources/j1/aprem/01-introduction-python.ipynb)   
