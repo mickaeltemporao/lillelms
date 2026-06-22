@@ -4,7 +4,7 @@
 
 This repository supports a summer school in France for political scientists and sociologists who are learning how to use Large Language Models (LLMs) in social science research.
 
-The audience consists primarily of researchers, PhD students, and advanced master's students with varying levels of programming experience. Many participants will be new to Python and notebook-based workflows.
+The audience consists primarily of researchers and PhD students with varying levels of programming experience. Many participants will be new to Python and notebook-based workflows.
 
 The course is delivered by multiple instructors. Different instructors are responsible for different half-day sessions. Materials should therefore be modular, self-contained, and easy to hand over between teaching teams.
 
@@ -26,7 +26,6 @@ Assume participants are:
 * Sociologists
 * PhD students
 * Researchers
-* Advanced master's students
 
 Do not assume prior knowledge of:
 
@@ -287,7 +286,7 @@ Each notebook should contain multiple short "Hack-Time" sections.
 
 A typical hack-time exercise should:
 
-* Take 5–15 minutes
+* Take 5–10 minutes
 * Focus on a single concept
 * Require modifying existing code rather than writing everything from scratch
 * Encourage experimentation
@@ -343,7 +342,7 @@ As a general rule:
 
 * Introduce a concept.
 * Demonstrate it.
-* Include a hack-time activity within the next 10–20 minutes of instruction.
+* Include a hack-time activity for every 10 minutes of instructions.
 
 Avoid notebooks that contain more than 20 minutes of teaching material without an interactive activity.
 
