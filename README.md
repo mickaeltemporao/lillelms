@@ -1,6 +1,6 @@
 # Exploration et Applications des IA Génératives en Sciences Sociales
 
-a.k.a LilleLMs | Organisation QuantiLille 2026
+LilleLMs a.k.a QuantiLille 2026
 
 22-26 juin 2026
 
@@ -13,6 +13,14 @@ a.k.a LilleLMs | Organisation QuantiLille 2026
 ## Description
 
 Ce module propose d’explorer les fondements et les applications des intelligences artificielles génératives dans le champ des sciences sociales. Conçu pour des participantes débutantes en programmation et curieuses des apports de l’IA en recherche, il offre une double approche. La première partie présente une initiation pratique à Python et la découverte progressive des outils d'analyse et de génération de contenus (textuels, audio, visuels) via des plateformes cloud. La seconde partie est articulée autour d’un focus thématique par jour, permettant d’approfondir chaque grand axe d’application avec des interventions d’expertes lors des demi-journées. L’objectif est d’équiper les chercheuses en sciences sociales de compétences techniques et analytiques permettant d'intégrer les IA génératives dans leurs projets de recherche, que ce soit comme outil d’analyse ou comme objet d’étude.
+
+## Communication & Collaboration
+
+Pour faciliter la collaboration et les échanges :
+- **Prise de [notes collaborative](https://semestriel.framapad.org/p/b38b6kzxms-alxk)** 
+- **Groupe [WhatsApp LilleLMs](https://chat.whatsapp.com/DbFt5py4zfyE5VaJns7y9s)** 
+
+  <img src="ressources/whatsapp_qr.png" width="150" alt="QR Code WhatsApp">
 
 ## Prérequis
 
