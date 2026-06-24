@@ -13,10 +13,11 @@ format:
 
 ## Objectifs
 
-- Configuration locale de Python
-- Ressources de calcul
-- Services publics/recherche pour l'IA générative
-- IA générative en local
+- 1. Configuration locale de Python
+- 2. Ressources de calcul
+- 3. Services publics/recherche pour l'IA générative
+- 4. IA générative en local
+- 5. Alternatives logicielles/GUI
 
 
 # 1. We have python at home
@@ -83,7 +84,7 @@ Alternative : [Marimo](https://marimo.io/) notebooks
 
 ## You're gonna need a bigger ~~boat~~ computer
 
-- Vos laboratoires (pour les gosses de riche) / vos universités
+- Vos laboratoires (pour les gosses de riches) / vos universités
 - [Humanum](https://documentation.huma-num.fr/calcul-scientifique/) 
 - [SSPcloud (INSEE)](https://datalab.sspcloud.fr)
 - [Mesocentres](https://groupe-calcul.cnrs.fr/pages/mesocentres_en_france.html) et [MesoNET](https://www.mesonet.fr/)
@@ -119,10 +120,21 @@ Alternative : [Marimo](https://marimo.io/) notebooks
 - [llama.cpp](https://llama.app/)
 - [vLLM](https://docs.vllm.ai/en/latest/)
 
+**Demo Ollama **(voir notebook)
+
+
+# 5. Alternatives logicielles/GUI
+
 ---
 
-## Demo
+## I want to click on stuff
+- [Active Tigger](https://www.css.cnrs.fr/active-tigger/)
+- [Cortext](https://www.cortext.net/)
+- [Hyperbase](https://hyperbase.unice.fr/)
 
+Et sans doute plein d'autres trucs !
+
+# You can do it
 
 <!-- Ces slides (et plus généralement les formations) sont le résultat d'échanges et de collaborations. 
 
