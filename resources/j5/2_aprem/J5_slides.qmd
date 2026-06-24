@@ -18,7 +18,6 @@ format:
 - Services publics/recherche pour l'IA générative
 - IA générative en local
 
----
 
 # 1. We have python at home
 
@@ -77,7 +76,6 @@ Alternative : [Marimo](https://marimo.io/) notebooks
 - [**pixi**](https://pixi.prefix.dev/latest/)
 - etc.
 
----
 
 # 2. Les moyens de calcul
 
@@ -93,18 +91,6 @@ Alternative : [Marimo](https://marimo.io/) notebooks
 - [European Open Science Cloud - EU Node](https://open-science-cloud.ec.europa.eu/)
 - plus largement voir l' [« Écosystème national de support en IA »](https://www.youtube.com/watch?v=vKEEIklmFAE&list=PLlI0-qAzf2Sb5-f31ceHvVo6cwrxBZEJV&index=2)
 
----
-
-## Détailler les machins un a un
-
-[**SSPcloud (INSEE)**](https://datalab.sspcloud.fr)
-
-Demande accès GENCI (jean-zay, etc.) :
-https://www.edari.fr/
-
-- = Unlimited(ish) power
-
----
 
 # 3. Services publics/recherche pour l'IA générative
 
@@ -121,7 +107,6 @@ https://www.edari.fr/
 - [AlbertAPI](https://ia.numerique.gouv.fr/outils-ia/albert-api/)
   - retour d'expérience [HN Lab Log](https://hnlab.huma-num.fr/blog/2026/05/24/PoC-AlbertAPI/)
 
----
 
 # 4. IA en local
 
@@ -129,18 +114,15 @@ https://www.edari.fr/
 
 ## Personal computer goes brrrrrr
 
-- Ollama
-- LMstudio
-- llama.cpp
-- vLLM
+- [Ollama](https://ollama.com/)
+- [LMstudio](https://lmstudio.ai/)
+- [llama.cpp](https://llama.app/)
+- [vLLM](https://docs.vllm.ai/en/latest/)
 
 ---
 
 ## Demo
 
-Détailler les plus courants (ex demo ollama ?)
-
----
 
 <!-- Ces slides (et plus généralement les formations) sont le résultat d'échanges et de collaborations. 
 
