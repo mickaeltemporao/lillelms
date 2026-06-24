@@ -49,3 +49,8 @@ Pour faciliter la collaboration et les échanges :
 
 Certaines parties de ce projet ont été assistées par IA. Ces derniers ont été guidés par les consignes définies dans le fichier [AGENTS.md](AGENTS.md). L'ensemble des programmes et explications reste sous la responsabilité des intervenant·es, qui ont validé chaque étape pour assurer leur intégrité pédagogique.
 
+## Licence
+
+Ce projet est sous licence [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE) (CC BY-NC-SA 4.0).
+Vous êtes libre d'utiliser, copier, adapter ce contenu ou le partager à condition de créditer les auteurs originaux, de ne pas en faire un usage commercial et de distribuer toute oeuvre dérivée sous cette même licence.
+
