@@ -2,12 +2,14 @@
 
 Prédictions prêtes à l'emploi pour la **séance fairness**. La personne qui anime fairness dispose ainsi directement des sorties d'un modèle, sans avoir à le ré-entraîner.
 
+Le train et le test sont **rééquilibrés à 50/50** (autant de réussites que d'échecs) par sous-échantillonnage, comme dans le notebook `02-ml-foundations.ipynb` (J2 matin). Les prédictions ne portent donc que sur ce jeu équilibré.
+
 ## Fichiers
 
 | Fichier | Contenu |
 |---|---|
-| `predictions_classification_train.csv` | prédictions sur le jeu d'entraînement (14 019 lignes) |
-| `predictions_classification_test.csv` | prédictions sur le jeu de test (4 673 lignes) |
+| `predictions_classification_train.csv` | prédictions sur le jeu d'entraînement rééquilibré 50/50 (2 738 lignes) |
+| `predictions_classification_test.csv` | prédictions sur le jeu de test rééquilibré 50/50 (934 lignes) |
 
 ## Colonnes
 
@@ -22,9 +24,9 @@ Prédictions prêtes à l'emploi pour la **séance fairness**. La personne qui a
 
 ## Modèle
 
-Régression logistique (`sklearn`, `max_iter=1000`) entraînée sur le **train**, en n'utilisant **que les features `x_*`** (l'attribut sensible `z_white` n'entre jamais dans le modèle). Accuracy ≈ 0,90 sur train comme sur test.
+Régression logistique (`sklearn`, `max_iter=1000`) entraînée sur le **train rééquilibré**, en n'utilisant **que les features `x_*`** (l'attribut sensible `z_white` n'entre jamais dans le modèle). Sur un jeu 50/50, l'accuracy ≈ 0,67 (train comme test) : les métriques ne sont plus gonflées par le déséquilibre des classes.
 
-Le modèle reproduit volontairement les disparités du dataset : sur le test, l'accuracy et les taux d'erreur diffèrent nettement selon `z_white`, ce qui donne matière à l'analyse fairness (parité démographique, equalized odds, etc.).
+Le modèle reproduit volontairement les disparités du dataset : même à classes équilibrées, l'accuracy et les taux d'erreur diffèrent nettement selon `z_white`, ce qui donne matière à l'analyse fairness (parité démographique, equalized odds, etc.).
 
 ## Génération
 
