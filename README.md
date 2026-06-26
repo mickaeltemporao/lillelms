@@ -34,8 +34,8 @@ Ce module est structuré en cinq journées thématiques. Vous pouvez lancer chaq
 | Mercredi PM | MT | **Un pas vers la multimodalité** | [- L'audio en silence](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j3/2_aprem/01-audio-analysis.ipynb)<br> [- Une image en 1000 mots](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j3/2_aprem/02-image-analysis.ipynb)|
 | Jeudi AM | LM & FV | **Enjeux éthiques & régulation** | [- L'IAGen et ses dérives](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j4/1_matin/bloc1-deteste-IAGenerative.pdf)<br>[- Gouvernance de l'IA](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j4/1_matin/bloc-2-gouvernance-ia.pdf)<br>|
 | Jeudi PM | FV | **Équité & explicabilité** | [- Équité](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j4/2_aprem/01-fairness.ipynb)<br>[- Datagotchi Santé](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j4/2_aprem/02-explicabilite-projet-datagotchi-sante.pdf)<br>[- Explications & LLM](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j4/2_aprem/03-generer-explications.ipynb) |
-| Vendredi AM | LM | **Synthèse & perspectives**| [- Clôture](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j5/1_matin/J5_slides.html)  |
-| Vendredi PM | ALL | **Configuration locale & autonomie**| [- Fine-tuning (optionnel)](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j5/2_aprem/01-fine-tuning.ipynb) |
+| Vendredi AM | ALL | **Perspectives**| [- La fin avant la fin](https://github.com/mickaeltemporao/lillelms/blob/main/resources/j5/1_matin/J5_slides.html)  |
+| Vendredi PM | ALL | **Autonomie**| [- Outils ouverts...](https://colab.research.google.com/github/mickaeltemporao/lillelms/blob/main/resources/j5/2_aprem/01-fine-tuning.ipynb) |
 
 ## Communication & Collaboration
 
