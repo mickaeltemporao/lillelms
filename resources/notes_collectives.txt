@@ -1,0 +1,96 @@
+*QuantiLille 2026 - Prise de notes collective
+[copie du framadate]
+
+Module. Exploration et Applications des IA Génératives en sciences sociales
+
+lien github : https://github.com/mickaeltemporao/lillelms
+
+https://www.css.cnrs.fr/request-an-account-on-the-crest-instance/
+
+DEMO ACTIVE TIGGER :
+https://demo0.activetigger.com/
+
+
+
+Package Manager: 
+
+Pour faciliter les installations python/ollama/pyenv/anaconda bref tout, vous pouvez installer un "package" manager. Et tout cela sera plus sécuritaire aussi! Suivez les instructions sur les pages suivantes en fonction de votre système d'opération:
+    - Windowns : https://chocolatey.org/install#individual
+    - MacOS : https://brew.sh/
+    
+*Liens évoqués durant le cours:
+*Formations :
+Scikit learn :
+Pour aller plus loin côté machine learning avec sklearn :
+- https://www.fun-mooc.fr/fr/cours/machine-learning-python-scikit-learn/ : version mooc
+- https://inria.github.io/scikit-learn-mooc/ : version sur le site de l'inria
+- https://skolar.probabl.ai/en/a/home;pa=0 : version skolar (par probabl, qui est la partie "start-up" derrière sklearn en gros)
+
+SICSS Paris 2025 : Embeddings / transformers / GPT / etc.
+Ressources SICSS PARIS 2025 : https://github.com/css-polytechnique/SICSS-2025-Material
+
+Autres
+- Support de formation à TXM (analyse textuelle en clique-bouton) + Yolo (pour l'analyse d'image) : https://dphn.parisgeo.cnrs.fr/journee_old/document_planification.html
+- Groupe ElementR (groupe de formation collaboratif à R ; Support et exercices déposés) : https://elementr.cnrs.fr/   
+
+3blue1brown :
+LLM / trasnfromers : https://www.youtube.com/watch?v=wjZofJX0v4M
+LLM : https://www.youtube.com/watch?v=LPZh9BOjkQs
+Réseaux de neurones : https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
+    
+*Ressources
+Animations, articles, etc.
+- reconnaissance images : https://teachablemachine.withgoogle.com/train/image
+- Réseau de neurones - animation visuelle : https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.37149&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false
+- enjeux tokenization : https://huggingface.co/blog/catherinearnett/in-defense-of-tokenizers
+- transformers (vulgarisation financial times) : https://ig.ft.com/generative-ai/
+
+Githubs
+https://github.com/cvandekerckh/lourim-ai-seminar-series : repo contenant des outils de type "interface" pour la recherche avec un tuto pour guider à l'utilisation de certains de ces outils
+
+Bibliothèques et méthodes :
+- kmeans : https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+- package NLTK : nombreux dictionnaires existants. https://www.nltk.org/
+- spacy (similaire nltk, un peu plus moderne vs nltk un poil "vieillissant") : https://spacy.io/
+
+Réf biblio :
+Compas : https://shs.cairn.info/article/RES_240_0071/pdf?lang=fr
+Numéro réseau éthique de l'IA : https://www.editionsladecouverte.fr/ethique_de_l_ia___enquetes_de_terrain-9782348079139
+
+Outil workflow :
+CWL (Common workflow language). documentation : www.commonwl.org +  https://www.commonwl.org/user_guide/ 
+
+Logiciels gratuits (avec Whisper derrière) :
+    - aTrain : https://github.com/JuergenFleiss/aTrain
+    - NoScribe : https://noscribe.de/fr/
+
+Skills :
+    - skills.sh
+
+Astuces :
+Si besoin d'ignorer les warnings (cf bug mwclient) :
+```
+*import warnings
+*warnings.filterwarnings("ignore")
+```
+
+# demo accès au modele qui tourne(ait) sur l'ordi de mickael
+CODE A COPIER
+text = "Votre requete"
+
+from openai import OpenAI
+client = OpenAI(
+    base_url="https://petersburg-workforce-integral-hypothesis.trycloudflare.com/v1",
+    api_key="ollama" # Pass a dummy key
+)
+response = client.chat.completions.create(
+    model="mistral:7b",
+    messages=[{"role": "user", "content": text}]
+)
+print(response.choices[0].message.content)
+
+
+Articles interessants : 
+    Fang, Q., Bernardo, J. G., & Kesteren, E.-J. van. (2026). A Methodological Guide on Using Large Language Models for Text Annotation in the Social Sciences and Humanities with Python and R (arXiv:2604.09638). arXiv. https://doi.org/10.48550/arXiv.2604.09638
+    
